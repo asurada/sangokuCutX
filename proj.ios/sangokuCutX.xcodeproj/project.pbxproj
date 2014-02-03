@@ -233,6 +233,7 @@
 		A2CBE531189F31CE00D03BB0 /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */; };
 		A2CBE532189F31CE00D03BB0 /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */; };
 		A2CBE539189F333F00D03BB0 /* SceneStartup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */; };
+		A2CBE543189F810200D03BB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE541189F810200D03BB0 /* BaseScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -734,6 +735,8 @@
 		A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
 		A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStartup.cpp; sourceTree = "<group>"; };
 		A2CBE538189F333F00D03BB0 /* SceneStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStartup.h; sourceTree = "<group>"; };
+		A2CBE541189F810200D03BB0 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
+		A2CBE542189F810200D03BB0 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1790,6 +1793,8 @@
 			children = (
 				A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */,
 				A2CBE538189F333F00D03BB0 /* SceneStartup.h */,
+				A2CBE541189F810200D03BB0 /* BaseScene.cpp */,
+				A2CBE542189F810200D03BB0 /* BaseScene.h */,
 			);
 			name = scene;
 			sourceTree = "<group>";
@@ -1992,6 +1997,7 @@
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,
 				46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */,
 				15A3DA371682F826002FB0C5 /* CCBValue.cpp in Sources */,
+				A2CBE543189F810200D03BB0 /* BaseScene.cpp in Sources */,
 				15A3DA381682F826002FB0C5 /* CCControlButtonLoader.cpp in Sources */,
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
