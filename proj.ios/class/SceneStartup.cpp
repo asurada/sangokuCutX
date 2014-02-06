@@ -39,24 +39,36 @@ bool SceneStartup::init()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
+    
+    
+    if(visibleSize.width == 568){
+        this->initBackground_iphone5();
+    }else{
+        this->initBackground_iphone4();
+    }
+    this->setTouchEnabled(true);
+    
+    this->iniHUD();
+
+    
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
     
-    // add a "close" icon to exit the progress. it's an autorelease object
-    CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                                          "CloseNormal.png",
-                                                          "CloseSelected.png",
-                                                          this,
-                                                          menu_selector(SceneStartup::menuCloseCallback));
-    
-	pCloseItem->setPosition(ccp(origin.x + visibleSize.width - pCloseItem->getContentSize().width/2 ,
-                                origin.y + pCloseItem->getContentSize().height/2));
-    
-    // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
-    pMenu->setPosition(CCPointZero);
-    this->addChild(pMenu, 1);
+//    // add a "close" icon to exit the progress. it's an autorelease object
+//    CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
+//                                                          "CloseNormal.png",
+//                                                          "CloseSelected.png",
+//                                                          this,
+//                                                          menu_selector(SceneStartup::menuCloseCallback));
+//    
+//	pCloseItem->setPosition(ccp(origin.x + visibleSize.width - pCloseItem->getContentSize().width/2 ,
+//                                origin.y + pCloseItem->getContentSize().height/2));
+//    
+//    // create menu, it's an autorelease object
+//    CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
+//    pMenu->setPosition(CCPointZero);
+//    this->addChild(pMenu, 1);
     
     /////////////////////////////
     // 3. add your codes below...
@@ -168,14 +180,13 @@ void SceneStartup::iniHUD(){
 void SceneStartup::initBackground_iphone5()
 {
      CCSize screen = CCDirector::sharedDirector()->getVisibleSize();
-    int height = 0;
-    int diff = 568.0 - screen.height;
+    //int height = 0;
+    //int diff = 568.0 - screen.height;
 
     CCSprite *background_01 = CCSprite::create("Page_battle_v1_iPhone5.png");
     background_01->setPosition(ccp(screen.width/2,screen.height/2));
     this->addChild(background_01,0);
-  }
-
+}
 
 void SceneStartup::initBackground_iphone4()
 {

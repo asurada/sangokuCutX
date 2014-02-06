@@ -13,8 +13,20 @@
 using namespace cocos2d;
 
 
+enum state {
+    _movingup,
+    _movingdown,
+    _standby,
+    _healthy,
+    _attack,
+    _injure,
+    _dead
+};
+
+
 class BaseCharacter : CCSprite
 {
+    
     
 private:
     float _hp;
@@ -47,7 +59,25 @@ private:
     CCAnimation  *_hidSound;
     std::string *_deadSound;
 
-    
+    CCObject spriteWithFile();
+    bool initSprite;
+    void injure(float direction);
+    void dead(float direction);
+    void attack();
+    void normal();
+    void action();
+    void hit(float direction);
+    void moveUp();
+    void moveDown();
+    void loadNormalAnim();
+    void loadInjureAnim();
+    void loadDeadAnim();
+    void loadAttackAnim();
+    void finishDead();
+    void stopAction();
+    state getState();
+    void setState(state stt);
+    void stopNormalAction();
 public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
