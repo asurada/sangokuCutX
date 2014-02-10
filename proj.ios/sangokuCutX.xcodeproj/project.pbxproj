@@ -227,6 +227,7 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
+		8641707918A8DD1B001CE902 /* BaseBossCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
@@ -948,6 +949,9 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		8641707518A8B688001CE902 /* CharacterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDelegate.h; sourceTree = "<group>"; };
+		8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseBossCharacter.cpp; sourceTree = "<group>"; };
+		8641707818A8DD1B001CE902 /* BaseBossCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBossCharacter.h; sourceTree = "<group>"; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -2198,6 +2202,14 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
+		8641707318A8B66C001CE902 /* callback */ = {
+			isa = PBXGroup;
+			children = (
+				8641707518A8B688001CE902 /* CharacterDelegate.h */,
+			);
+			name = callback;
+			sourceTree = "<group>";
+		};
 		A2CBE502189F2BC600D03BB0 /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -2212,6 +2224,7 @@
 		A2CBE503189F2BC600D03BB0 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				8641707318A8B66C001CE902 /* callback */,
 				A2CBE536189F321800D03BB0 /* base */,
 				A2CBE535189F321100D03BB0 /* enemey */,
 				A2CBE534189F320900D03BB0 /* data */,
@@ -2272,6 +2285,8 @@
 			children = (
 				A2CBE717189F828F00D03BB0 /* BaseCharacter.cpp */,
 				A2CBE718189F828F00D03BB0 /* BaseCharacter.h */,
+				8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */,
+				8641707818A8DD1B001CE902 /* BaseBossCharacter.h */,
 			);
 			name = enemey;
 			sourceTree = "<group>";
@@ -3018,6 +3033,7 @@
 				15A3D9A41682F7F9002FB0C5 /* cpBB.c in Sources */,
 				15A3D9A51682F7F9002FB0C5 /* cpBBTree.c in Sources */,
 				15A3D9A61682F7F9002FB0C5 /* cpBody.c in Sources */,
+				8641707918A8DD1B001CE902 /* BaseBossCharacter.cpp in Sources */,
 				15A3D9A71682F7F9002FB0C5 /* cpCollision.c in Sources */,
 				15A3D9A81682F7F9002FB0C5 /* cpHashSet.c in Sources */,
 				15A3D9A91682F7F9002FB0C5 /* cpPolyShape.c in Sources */,

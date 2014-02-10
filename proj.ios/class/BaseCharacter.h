@@ -10,8 +10,12 @@
 #define __sangokuCutX__BaseCharacter__
 
 #include "cocos2d.h"
+#include "CharacterDelegate.h"
 using namespace cocos2d;
+using namespace std;
 
+
+namespace BaseCharacterSpace {
 
 enum state {
     _movingup,
@@ -24,7 +28,7 @@ enum state {
 };
 
 
-class BaseCharacter : CCSprite
+class BaseCharacter : public CCSprite
 {
     
     
@@ -41,26 +45,15 @@ private:
     
     std::string _name;
     //CCObject<CharacterDelegate> _charDelegate;
-    //state _state;
+    
     bool _hasAttack;
     
-    CCAnimation *_injureAnim;
-    CCAnimation  *_normalAnim;
-    CCAnimation  *_deadAnim;
-    CCAnimation  *_attackAnim;
     
-    
-    CCAnimation  *_normalAction;
-    CCAnimation  *_injureAction;
-    CCAnimation  *_deadAction;
-    CCAnimation  *_attackAction;
-    CCAnimation  *_upAction;
-    CCAnimation  *_downAction;
-    CCAnimation  *_hidSound;
-    std::string *_deadSound;
+    char  *_hidSound;
+    char  *_deadSound;
 
     CCObject spriteWithFile();
-    bool initSprite;
+   
     void injure(float direction);
     void dead(float direction);
     void attack();
@@ -74,19 +67,39 @@ private:
     void loadDeadAnim();
     void loadAttackAnim();
     void finishDead();
-    void stopAction();
+    void finishInjure();
+    
+
     state getState();
+    void setScaleX();
     void setState(state stt);
     void stopNormalAction();
 public:
+    state _state;
+    CCAnimation *_injureAnim;
+    CCAnimation  *_normalAnim;
+    CCAnimation  *_deadAnim;
+    CCAnimation  *_attackAnim;
+    
+    
+    CCRepeatForever  *_normalAction;
+    CCSequence   *_injureAction;
+    CCSequence   *_deadAction;
+    CCRepeatForever  *_attackAction;
+    CCAnimation  *_upAction;
+    CCAnimation  *_downAction;
+    
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
-    
-    
-    
-    
+    virtual bool initSprite();
+    virtual void finishMoveDown();
+    virtual void finishMoveUp();
+    void stopAction();
+    CharacterDelegate *delegate;
     // implement the "static node()" method manually
     CREATE_FUNC(BaseCharacter);
 };
 
+    
+}
 #endif

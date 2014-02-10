@@ -7,166 +7,171 @@
 //
 
 #include "BaseCharacter.h"
+#include <SimpleAudioEngine.h>
+
+using namespace cocos2d;
+using namespace CocosDenshion;
+
 USING_NS_CC;
+using namespace BaseCharacterSpace;
 
 
-
-
-BOOL BaseCharacter::initSprite(){
-    _state = standby;
-    [self loadNormalAnim];
-    [self loadInjureAnim];
-    [self loadDeadAnim];
-    [self loadAttackAnim];
-    [self setScaleX];
-    original_Y = self.position.y;
-    return YES;
+bool BaseCharacter::initSprite(){
+    _state = _standby;
+    this-> loadNormalAnim();
+    this-> loadInjureAnim();
+    this-> loadDeadAnim();
+    this-> loadAttackAnim();
+    this-> setScaleX();
+    original_Y = this->getPosition().y;
+    return true;
 }
 
 
--(void)setScaleX{
+void BaseCharacter::setScaleX(){
     int result = arc4random()%2;
     if(result == 1){
-        self.scaleX = -1;
+        this->setScale(-1);
     }else{
-        self.scaleX = 1;
+        this->setScale(1);
     }
 }
 
--(void)injure:(float)direction{
-    [[SimpleAudioEngine sharedEngine] playEffect:self.hidSound];
-    if(_state != injure){
+void BaseCharacter::injure(float direction){
+    SimpleAudioEngine::sharedEngine()->playEffect(_hidSound);
+    if(_state != _injure){
         if(_hp >0){
             _hp--;
         }
         if(direction >= 0){
-            self.scaleX = 1;
+            this->setScale(-1);
         }else{
-            self.scaleX = -1;
+            this->setScale(1);
         }
         
-        _state = injure;
-        [self stopAllActions];
-        id injureAnimation = [CCAnimate actionWithAnimation:self.injureAnim];
-        id injureRepeat = [CCRepeat actionWithAction:injureAnimation times:1];
-        id injureCallback = [CCCallFunc actionWithTarget:self selector:@selector(finishInjure)];
-        _injureAction = [[CCSequence actions:injureRepeat,injureCallback,nil]retain];
-        [self runAction:_injureAction];
-        [charDelegate onInjureGirl:self];
+        
+        _state = _injure;
+        this->stopAllActions();
+        CCAnimate *injureAnimation = CCAnimate::create(_injureAnim);
+        CCRepeat *injureRepeat = CCRepeat::create(injureAnimation,1);
+        CCCallFunc *injureCallback =  CCCallFunc::create(this, callfunc_selector(BaseCharacter::finishInjure));
+        _injureAction = CCSequence::create(injureRepeat,injureCallback);
+        this->runAction(_injureAction);
+        delegate->onInjureGirl(this);
     }
 }
 
 
--(void)normal{
-    if(_state != healthy){
-        _normalAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.normalAnim]];
-        [self runAction:_normalAction];
-        _state = healthy;
+void BaseCharacter::normal(){
+    if(_state != _healthy){
+        _normalAction = CCRepeatForever::create(CCAnimate::create(_normalAnim));
+        this->runAction(_normalAction);
+        _state = _healthy;
         
     }
 }
 
 
--(void)dead:(float)direction{
-    if(_state != dead){
+void BaseCharacter::dead(float direction){
+    if(_state != _dead){
         if(direction >= 0){
-            self.scaleX = 1;
+            this->setScale(-1);
         }else{
-            self.scaleX = -1;
+            this->setScale(1);
         }
-        _state = dead;
-        [self stopAction];
-        self.zOrder = 10-(self.index/3)*3;//
-        self.position = ccp(self.position.x+(3*self.scaleX), self.position.y+50);
-        [[SimpleAudioEngine sharedEngine] playEffect:self.deadSound];
-        [charDelegate onBeforeCharacterDead:self];
-        id animation = [CCAnimate actionWithAnimation:self.deadAnim];
-        id action = [CCRepeat actionWithAction:animation times:1];
-        id callback = [CCCallFunc actionWithTarget:self selector:@selector(finishDead)];
-        _deadAction = [[CCSequence actions:action,callback,nil]retain];
-        [self runAction:_deadAction];
-    }
-}
-
--(void)attack{
-    if(_state != attack && _hasAttack){
-        _state = attack;
-        [self stopAction];
-        _attackAction = [CCRepeatForever actionWithAction:
-                         [CCAnimate actionWithAnimation:self.attackAnim]];
-        [self runAction:_attackAction];
-    }
+        _state = _dead;
+        this->stopAction();
     
+        this->setOrderOfArrival(10-(_index/3)*3);//
+        this->setPosition(ccp(this->getPosition().x+(3*this->getScaleX()), this->getPosition().y+50));
+        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound);
+        delegate->onBeforeCharacterDead(this);
+        CCAnimate *animation = CCAnimate::create(_deadAnim);
+        CCRepeat *action = CCRepeat::create(animation,1);;
+        CCCallFunc *callback = CCCallFunc::create(this,callfunc_selector(BaseCharacter::finishDead));
+        _deadAction = CCSequence::create(action,callback);
+        this->runAction(_deadAction);
+    }
 }
 
--(void)moveUp{
-    original_Y = self.position.y;
-    _state = movingup;
-    id moveTo = [CCMoveTo actionWithDuration:self.moveUpSpeed position:ccp(self.position.x,self.position.y+self.intervalSpaceMove)];
-    id callback = [CCCallFunc actionWithTarget:self selector:@selector(finishMoveUp)];
-    [self runAction:[CCSequence actions:moveTo,callback,nil]];
-    [self schedule:@selector(moveDown) interval:self.waitingTime];
-}
-
-
-
-
--(void)moveDown{
-    if(_state != dead){
-        _state = movingdown;
-        self.zOrder = 7-(self.index/3)*3;
-        [self unscheduleAllSelectors];
-        id moveTo = [CCMoveTo actionWithDuration:self.moveDownSpeed position:ccp(self.position.x,original_Y)];
-        id callback = [CCCallFunc actionWithTarget:self selector:@selector(finishMoveDown)];
-        [self runAction:[CCSequence actions:moveTo,callback,nil]];
+void BaseCharacter::attack(){
+    if(_state != _attack && _hasAttack){
+        _state = _attack;
+        this->stopAction();
+        _attackAction = CCRepeatForever::create(CCAnimate::create(_attackAnim));
+        this->runAction(_attackAction);
     }
     
 }
 
-
--(void)finishMoveDown{
-    [self stopAction];
-    _state = standby;
-    [self removeFromParentAndCleanup:YES];
+void BaseCharacter::moveUp(){
+    original_Y = this->getPosition().y;
+    _state = _movingup;
+    CCMoveTo *moveTo = CCMoveTo::create(_moveUpSpeed, ccp(this->getPosition().x,this->getPosition().y+_intervalSpaceMove));
+    CCCallFunc *callback = CCCallFunc::create(this,callfunc_selector(BaseCharacter::finishMoveUp));
+    this->runAction(CCSequence::create(moveTo,callback));
+    this->schedule(schedule_selector(BaseCharacter::moveDown), _waitingTime);
 }
 
 
--(void)finishMoveUp{
-    [self normal];
-    self.zOrder = 11-(self.index/3)*3;//
-}
 
--(void)finishDead{
-    [self unscheduleAllSelectors];
-    _injureAnim = nil;
-    _normalAnim = nil;;
-    _deadAnim = nil;
-    _attackAnim = nil;
-    _normalAction = nil;
-    _injureAction = nil;
-    _deadAction = nil;
-    _attackAction = nil;
-    _upAction = nil;
-    _downAction = nil;
-    
-    [_injureAnim release];
-    [_normalAnim release];
-    [_deadAnim release];
-    [_attackAnim release];
-    [_normalAction release];
-    [_injureAction release];
-    [_deadAction release];
-    [_attackAction release];
-    [_upAction release];
-    [_downAction release];
-    [charDelegate onCharacterDead:self.position sender:self];
-    [self removeFromParentAndCleanup:YES];
+
+void BaseCharacter::moveDown(){
+    if(_state != _dead){
+        _state = _movingdown;
+        this->setOrderOfArrival(7-(_index/3)*3);
+        this->unscheduleAllSelectors();
+        CCMoveTo* moveTo = CCMoveTo::create(_moveDownSpeed,ccp(this->getPosition().x,original_Y));
+        CCCallFunc* callback =CCCallFunc::create(this,callfunc_selector(BaseCharacter::finishMoveDown));
+        this->runAction(CCSequence::create(moveTo,callback));
+    }
     
 }
 
 
--(void)finishInjure{
-    [self normal];
+void BaseCharacter::finishMoveDown(){
+    this->stopAction();
+    _state = _standby;
+    this->removeFromParentAndCleanup(true);
+}
+
+
+void BaseCharacter::finishMoveUp(){
+    this->normal();
+    this->setOrderOfArrival((11-_index/3)*3);
+
+}
+
+void BaseCharacter::finishDead(){
+    this->unscheduleAllSelectors();
+    _injureAnim = NULL;
+    _normalAnim = NULL;
+    _deadAnim = NULL;
+    _attackAnim = NULL;
+    _normalAction = NULL;
+    _injureAction = NULL;
+    _deadAction = NULL;
+    _attackAction = NULL;
+    _upAction = NULL;
+    _downAction = NULL;
+    
+    _injureAnim->release();
+    _normalAnim->release();
+    _deadAnim->release();
+    _attackAnim->release();
+    _normalAction->release();
+    _injureAction->release();
+    _deadAction->release();
+    _attackAction->release();
+    _upAction->release();
+    _downAction->release();
+    delegate->onCharacterDead(this->getPosition(),this);
+    this->removeFromParentAndCleanup(true);
+    
+}
+
+void BaseCharacter::finishInjure(){
+    this->normal();
 }
 
 
@@ -177,24 +182,24 @@ state BaseCharacter::getState(){
     return _state;
 }
 
-void BaseCharacter::setState:(state stt){
+void BaseCharacter::setState(state stt){
     _state = stt;
 }
 
-void hit::(float direction){
+void BaseCharacter::hit(float direction){
     if(_hp > 1){
-        [self injure:direction];
-    }else if(_hp == 1 && _state != dead){
-        [self dead:direction];
+        this->injure(direction);
+    }else if(_hp == 1 && _state != _dead){
+        this->dead(direction);
     }
 }
 
--(void)stopAction{
-    [self stopAllActions];
+void BaseCharacter::stopAction(){
+    this->stopAllActions();
 }
 
--(void)stopNormalAction{
-    [_normalAction stop];
-    [_attackAction stop];
-    [_injureAction stop];
+void BaseCharacter::stopNormalAction(){
+    _normalAction->stop();
+    _attackAction->stop();
+    _injureAction->stop();
 }
