@@ -18,6 +18,10 @@ class Siheng:BaseCharacter{
 public:
     typedef BaseCharacter super;
     CCObject spriteWithFile();
+    virtual void loadInjureAnim();
+    virtual void loadAttackAnim();
+    virtual void loadDeadAnim();
+    virtual void loadNormalAnim();
 };
 
 #endif /* defined(__sangokuCutX__Siheng__) */

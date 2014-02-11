@@ -28,7 +28,7 @@ bool initSprite(){
 }
 
 
--(void)loadInjureAnim{
+void Siheng::loadInjureAnim(){
     /*
      NSMutableArray *injureAnimFrames = [NSMutableArray array];
      for (int i=1; i<=12; i++) {
@@ -42,7 +42,7 @@ bool initSprite(){
 
 
 
--(void)loadAttackAnim{
+void Siheng::loadAttackAnim(){
     /*
      NSMutableArray *attackAnimFrames = [NSMutableArray array];
      for (int i=1; i<=12; i++) {
@@ -56,7 +56,7 @@ bool initSprite(){
 
 
 
--(void)loadDeadAnim{
+void Siheng::loadDeadAnim(){
     self.deadSound  = @"fingerHit_6.caf";
     NSMutableArray *deadAnimFrames = [NSMutableArray array];
     for (int i=1; i<=56; i++) {
@@ -68,7 +68,7 @@ bool initSprite(){
 }
 
 
--(void)loadNormalAnim{
+void Siheng::loadNormalAnim(){
     NSMutableArray *normalAnimFrames = [NSMutableArray array];
     for (int i=1; i<=14; i++) {
         [normalAnimFrames addObject:
@@ -82,7 +82,7 @@ bool initSprite(){
 
 
 
--(void)dealloc{
+void dealloc(){
     [super dealloc];
 }
 
