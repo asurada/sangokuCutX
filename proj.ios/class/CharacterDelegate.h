@@ -16,15 +16,13 @@ using namespace cocos2d;
 
 class CharacterDelegate{
    public:
-    void onCharacterDead(CCPoint location,CCSprite* sender);
-    void onBeforeCharacterDead(CCSprite * sender);
-    void onInjureGirl(CCSprite * sender);
-    void onInjureBoss(CCPoint *location,CCSprite* sender,float rate);
-    void onKillBoss(CCSprite *sender);
-    void onGotCoint(CCSprite *sender);
-    void onCoinDisapper(CCSprite *sender);
-    
-    
+     void onCharacterDead(CCPoint location,CCSprite* sender);
+     void onBeforeCharacterDead(CCSprite * sender);
+     void onInjureGirl(CCSprite * sender);
+     void onInjureBoss(CCPoint location,CCSprite* sender,float rate);
+     void onKillBoss(CCSprite *sender);
+     void onGotCoint(CCSprite *sender);
+     void onCoinDisapper(CCSprite *sender);
 };
 
 

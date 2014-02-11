@@ -7,10 +7,14 @@
 //
 
 #include "BaseBossCharacter.h"
+#include <SimpleAudioEngine.h>
 USING_NS_CC;
 
+using namespace CocosDenshion;
 using namespace BaseCharacterSpace;
 using BaseCharacterSpace::state;
+using cocos2d::CCSprite;
+
 
 float preDirection = 0.0;
 
@@ -46,25 +50,27 @@ void BaseBossCharacter::finishDead(){
     
 }
 
-void dead(float direction){
+void BaseBossCharacter::dead(float direction){
     if(_state != _dead){
         if(direction >= 0){
-            this->setScaleX(1);
+            this->CCSprite::setScaleX(1.0f);
         }else{
-            this->setScaleX(-1);
+            this->CCSprite::setScaleX(-1.0f);
         }
-        _state = dead;
-        [self stopAction];
-        self.position = ccp(self.position.x+(3*self.scaleX), self.position.y+50);
-        self.zOrder = 10-(self.index/3)*3;//
-        [[SimpleAudioEngine sharedEngine] playEffect:self.deadSound];
-        [self.charDelegate onBeforeCharacterDead:self];
-        [self.charDelegate onKillBoss:self];
-        id animation = [CCAnimate actionWithAnimation:self.deadAnim];
-        id action = [CCRepeat actionWithAction:animation times:1];
-        id callback = [CCCallFunc actionWithTarget:self selector:@selector(finishDead)];
-        _deadAction = [[CCSequence actions:action,callback,nil]retain];
-        [self runAction:_deadAction];
+        _state = _dead;
+        this->stopAction();
+        this->setPosition(ccp(this->getPosition().x+(3*this->getPosition().x), this->getPosition().y+50));
+        this->setOrderOfArrival((10-_index/3)*3);
+        
+        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound);
+        delegate->onBeforeCharacterDead(this);
+        delegate->onKillBoss(this);
+        
+        CCAnimate *animation = CCAnimate::create(_deadAnim);
+        CCRepeat *action = CCRepeat::create(animation,1);
+        CCCallFunc *callback =  CCCallFunc::create(this, callfunc_selector(BaseCharacter::finishDead));
+        _deadAction =  CCSequence::create(action,callback);
+        this->runAction(_deadAction);
     }
 }
 
@@ -72,24 +78,24 @@ void dead(float direction){
 void BaseBossCharacter::injure(float direction){
     if(preDirection == 0 || ((float)preDirection*direction)<0){
         if(direction >= 0){
-            self.scaleX = 1;
+            this->CCSprite::setScaleX(1.0f);
         }else{
-            self.scaleX = -1;
+            this->CCSprite::setScaleX(-1.0f);
         }
         if(_hp >0){
             _hp--;
         }
         preDirection = direction;
-        _state = injure;
-        [[SimpleAudioEngine sharedEngine] playEffect:self.hidSound];
-        [self stopNormalAction];
-        id injureAnimation = [CCAnimate actionWithAnimation:self.injureAnim];
-        id injureRepeat = [CCRepeat actionWithAction:injureAnimation times:1];
-        id injureCallback = [CCCallFunc actionWithTarget:self selector:@selector(finishInjure)];
-        _injureAction = [[CCSequence actions:injureRepeat,injureCallback,nil]retain];
-        
-        [self runAction:_injureAction];
-        [self.charDelegate onInjureBoss:self.position sender:self bossBloodRate:(float)_hp/(float)_allHp];
+        _state = _injure;
+        SimpleAudioEngine::sharedEngine()->playEffect(_hidSound);
+        this->stopNormalAction();
+      
+        CCAnimate *injureAnimation = CCAnimate::create(_injureAnim);
+        CCRepeat *injureRepeat = CCRepeat::create(injureAnimation,1);
+        CCCallFunc *injureCallback = CCCallFunc::create(this,callfunc_selector(BaseCharacter::finishInjure));
+        _injureAction = CCSequence::create(injureRepeat,injureCallback);
+        this->runAction(_injureAction);
+        delegate->onInjureBoss(this->getPosition(), this, (float)_hp/(float)_allHp);
     }
     
 }
@@ -103,7 +109,6 @@ void BaseBossCharacter::finishInjure(){
 void BaseBossCharacter::stopNormalAction(){
     _normalAction->stop();
     _attackAction->stop();
-    // [_injureAction stop];
 }
 
 

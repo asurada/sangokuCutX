@@ -20,6 +20,10 @@ class BaseBossCharacter:public BaseCharacter{
     virtual void finishMoveDown();
     virtual void finishMoveUp();
     virtual void finishDead();
+    virtual void dead(float direction);
+    virtual void injure(float direction);
+    virtual void finishInjure();
+    virtual void stopNormalAction();
 };
 
 

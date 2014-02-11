@@ -49,7 +49,7 @@ void BaseCharacter::injure(float direction){
             this->setScale(1);
         }
         
-        
+
         _state = _injure;
         this->stopAllActions();
         CCAnimate *injureAnimation = CCAnimate::create(_injureAnim);

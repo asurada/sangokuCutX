@@ -228,6 +228,15 @@
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		8641707918A8DD1B001CE902 /* BaseBossCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */; };
+		8641708018AA4C56001CE902 /* Logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641707E18AA4C56001CE902 /* Logic.cpp */; };
+		8641708318AA501B001CE902 /* Siheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708118AA501B001CE902 /* Siheng.cpp */; };
+		8641708618AA502C001CE902 /* Siha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708418AA502C001CE902 /* Siha.cpp */; };
+		8641708918AA5057001CE902 /* HuangjinSiha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708718AA5057001CE902 /* HuangjinSiha.cpp */; };
+		8641708C18AA5085001CE902 /* HuangjinSihei.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708A18AA5085001CE902 /* HuangjinSihei.cpp */; };
+		8641708F18AA50A0001CE902 /* HuangjinSiheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708D18AA50A0001CE902 /* HuangjinSiheng.cpp */; };
+		8641709218AA50F7001CE902 /* BossZhangjiao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709018AA50F7001CE902 /* BossZhangjiao.cpp */; };
+		8641709518AA510B001CE902 /* Sibao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709318AA510B001CE902 /* Sibao.cpp */; };
+		8641709818AA512E001CE902 /* Sihei.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709618AA512E001CE902 /* Sihei.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
@@ -952,6 +961,25 @@
 		8641707518A8B688001CE902 /* CharacterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDelegate.h; sourceTree = "<group>"; };
 		8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseBossCharacter.cpp; sourceTree = "<group>"; };
 		8641707818A8DD1B001CE902 /* BaseBossCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBossCharacter.h; sourceTree = "<group>"; };
+		8641707B18AA49CE001CE902 /* ItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDelegate.h; sourceTree = "<group>"; };
+		8641707E18AA4C56001CE902 /* Logic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logic.cpp; sourceTree = "<group>"; };
+		8641707F18AA4C56001CE902 /* Logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logic.h; sourceTree = "<group>"; };
+		8641708118AA501B001CE902 /* Siheng.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Siheng.cpp; sourceTree = "<group>"; };
+		8641708218AA501B001CE902 /* Siheng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Siheng.h; sourceTree = "<group>"; };
+		8641708418AA502C001CE902 /* Siha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Siha.cpp; sourceTree = "<group>"; };
+		8641708518AA502C001CE902 /* Siha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Siha.h; sourceTree = "<group>"; };
+		8641708718AA5057001CE902 /* HuangjinSiha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HuangjinSiha.cpp; sourceTree = "<group>"; };
+		8641708818AA5057001CE902 /* HuangjinSiha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuangjinSiha.h; sourceTree = "<group>"; };
+		8641708A18AA5085001CE902 /* HuangjinSihei.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HuangjinSihei.cpp; sourceTree = "<group>"; };
+		8641708B18AA5085001CE902 /* HuangjinSihei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuangjinSihei.h; sourceTree = "<group>"; };
+		8641708D18AA50A0001CE902 /* HuangjinSiheng.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HuangjinSiheng.cpp; sourceTree = "<group>"; };
+		8641708E18AA50A0001CE902 /* HuangjinSiheng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuangjinSiheng.h; sourceTree = "<group>"; };
+		8641709018AA50F7001CE902 /* BossZhangjiao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BossZhangjiao.cpp; sourceTree = "<group>"; };
+		8641709118AA50F7001CE902 /* BossZhangjiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossZhangjiao.h; sourceTree = "<group>"; };
+		8641709318AA510B001CE902 /* Sibao.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sibao.cpp; sourceTree = "<group>"; };
+		8641709418AA510B001CE902 /* Sibao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sibao.h; sourceTree = "<group>"; };
+		8641709618AA512E001CE902 /* Sihei.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sihei.cpp; sourceTree = "<group>"; };
+		8641709718AA512E001CE902 /* Sihei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sihei.h; sourceTree = "<group>"; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -2206,8 +2234,18 @@
 			isa = PBXGroup;
 			children = (
 				8641707518A8B688001CE902 /* CharacterDelegate.h */,
+				8641707B18AA49CE001CE902 /* ItemDelegate.h */,
 			);
 			name = callback;
+			sourceTree = "<group>";
+		};
+		8641707D18AA4C1E001CE902 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				8641707E18AA4C56001CE902 /* Logic.cpp */,
+				8641707F18AA4C56001CE902 /* Logic.h */,
+			);
+			name = logic;
 			sourceTree = "<group>";
 		};
 		A2CBE502189F2BC600D03BB0 /* resource */ = {
@@ -2224,6 +2262,7 @@
 		A2CBE503189F2BC600D03BB0 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				8641707D18AA4C1E001CE902 /* logic */,
 				8641707318A8B66C001CE902 /* callback */,
 				A2CBE536189F321800D03BB0 /* base */,
 				A2CBE535189F321100D03BB0 /* enemey */,
@@ -2287,6 +2326,22 @@
 				A2CBE718189F828F00D03BB0 /* BaseCharacter.h */,
 				8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */,
 				8641707818A8DD1B001CE902 /* BaseBossCharacter.h */,
+				8641708118AA501B001CE902 /* Siheng.cpp */,
+				8641708218AA501B001CE902 /* Siheng.h */,
+				8641708418AA502C001CE902 /* Siha.cpp */,
+				8641708518AA502C001CE902 /* Siha.h */,
+				8641708718AA5057001CE902 /* HuangjinSiha.cpp */,
+				8641708818AA5057001CE902 /* HuangjinSiha.h */,
+				8641708A18AA5085001CE902 /* HuangjinSihei.cpp */,
+				8641708B18AA5085001CE902 /* HuangjinSihei.h */,
+				8641708D18AA50A0001CE902 /* HuangjinSiheng.cpp */,
+				8641708E18AA50A0001CE902 /* HuangjinSiheng.h */,
+				8641709018AA50F7001CE902 /* BossZhangjiao.cpp */,
+				8641709118AA50F7001CE902 /* BossZhangjiao.h */,
+				8641709318AA510B001CE902 /* Sibao.cpp */,
+				8641709418AA510B001CE902 /* Sibao.h */,
+				8641709618AA512E001CE902 /* Sihei.cpp */,
+				8641709718AA512E001CE902 /* Sihei.h */,
 			);
 			name = enemey;
 			sourceTree = "<group>";
@@ -2967,9 +3022,11 @@
 				15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */,
 				15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */,
 				15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */,
+				8641708018AA4C56001CE902 /* Logic.cpp in Sources */,
 				15A3D9021682F7D5002FB0C5 /* b2CollidePolygon.cpp in Sources */,
 				15A3D9031682F7D5002FB0C5 /* b2Collision.cpp in Sources */,
 				15A3D9041682F7D5002FB0C5 /* b2Distance.cpp in Sources */,
+				8641708318AA501B001CE902 /* Siheng.cpp in Sources */,
 				15A3D9051682F7D5002FB0C5 /* b2DynamicTree.cpp in Sources */,
 				15A3D9061682F7D5002FB0C5 /* b2TimeOfImpact.cpp in Sources */,
 				15A3D9071682F7D5002FB0C5 /* b2ChainShape.cpp in Sources */,
@@ -2985,6 +3042,7 @@
 				15A3D90E1682F7D5002FB0C5 /* b2Settings.cpp in Sources */,
 				15A3D90F1682F7D5002FB0C5 /* b2StackAllocator.cpp in Sources */,
 				15A3D9101682F7D5002FB0C5 /* b2Timer.cpp in Sources */,
+				8641709818AA512E001CE902 /* Sihei.cpp in Sources */,
 				15A3D9111682F7D5002FB0C5 /* b2Body.cpp in Sources */,
 				15A3D9121682F7D5002FB0C5 /* b2ContactManager.cpp in Sources */,
 				15A3D9131682F7D5002FB0C5 /* b2Fixture.cpp in Sources */,
@@ -3008,9 +3066,11 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
+				8641708C18AA5085001CE902 /* HuangjinSihei.cpp in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				A2CBE531189F31CE00D03BB0 /* CCBlade.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
+				8641708618AA502C001CE902 /* Siha.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
@@ -3083,10 +3143,12 @@
 				15A3DA4E1682F826002FB0C5 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				15A3DA4F1682F826002FB0C5 /* CCControlSlider.cpp in Sources */,
 				15A3DA501682F826002FB0C5 /* CCControlStepper.cpp in Sources */,
+				8641708918AA5057001CE902 /* HuangjinSiha.cpp in Sources */,
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
 				375BD4C41868411B0024609E /* TriggerBase.cpp in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
+				8641709518AA510B001CE902 /* Sibao.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,
@@ -3124,6 +3186,7 @@
 				1A8F3B77175E05DA00049216 /* CCSkeleton.cpp in Sources */,
 				1A8F3B78175E05DA00049216 /* CCSkeletonAnimation.cpp in Sources */,
 				375BD5121868454E0024609E /* CCActionNode.cpp in Sources */,
+				8641708F18AA50A0001CE902 /* HuangjinSiheng.cpp in Sources */,
 				1A8F3B79175E05DA00049216 /* extension.cpp in Sources */,
 				1A8F3B7A175E05DA00049216 /* Json.cpp in Sources */,
 				1A8F3B7B175E05DA00049216 /* RegionAttachment.cpp in Sources */,
@@ -3182,6 +3245,7 @@
 				379BB9C717F03F3700829B88 /* UISlider.cpp in Sources */,
 				379BB9C917F03F3700829B88 /* UITextField.cpp in Sources */,
 				379BB9CB17F03F3700829B88 /* DictionaryHelper.cpp in Sources */,
+				8641709218AA50F7001CE902 /* BossZhangjiao.cpp in Sources */,
 				379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */,
 				379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */,
 			);
