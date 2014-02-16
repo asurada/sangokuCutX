@@ -10,68 +10,58 @@
 #include "Coin.h"
 #include "Siha.h"
 #include "Siheng.h"
-#import "HuangjinSiha.h"
-#import "HuangjinSihei.h"
-#import "HuangjinSiheng.h"
-#import "BossZhangjiao.h"
-#import "Sibao.h"
-#import "Sihei.h"
-#import "CCPhysicsSprite.h"
-#import "Box2D.h"
+#include "HuangjinSiha.h"
+#include "HuangjinSihei.h"
+#include "HuangjinSiheng.h"
+#include "BossZhangjiao.h"
+#include "Sibao.h"
+#include "Sihei.h"
+#include "CCPhysicsSprite.h"
+#include "Box2D.h"
 
-@implementation Logic
+using namespace BaseCharacterSpace;
 
-@synthesize enemyBox = _enemyBox;
-@synthesize layer = _layer;
-@synthesize logic = _logic;
-@synthesize coinBox = _coinBox;
-@synthesize world = _world;
-@synthesize charDelegate;
-
--(Logic*)iniLogic:(Logic *)lgc{
-    self.logic = lgc;
-    _enemyBox = [[NSMutableArray alloc] init];
-    _coinBox =[[NSMutableArray alloc] init];
-    return [super init];
+Logic* Logic::iniLogic(Logic *lgc){
+    this->_logic = lgc;
+    _enemyBox = CCArray::create();
+    _coinBox = CCArray::create();
+    return new Logic();
 }
 
--(void)loadEnmey{
+void Logic::loadEnmey(){
     for(int index = 0; index < 9;index++){
-        // BaseCharacter* enemy = ;[self createEnemey:index];
-        [_enemyBox addObject:[NSNull null]];
+        _enemyBox->addObject(NULL);
     }
 }
 
-
--(BaseCharacter *)createEnemy:(int)index{
-    BaseCharacter* enemy = [self getEnemy];
-    [enemy setState:standby];
-    enemy.charDelegate = self;
-    if([enemy initSprite]){
-        enemy.position =  CGPointMake(50+(index%3)*110,-25+(index/3)*105);
+BaseCharacter* Logic::createEnemy(int index){
+    BaseCharacter* enemy = this->getEnemy();
+    enemy->setState(_standby);
+    if(enemy->initSprite()){
+        enemy->setPosition(CCPointMake(50+(index%3)*110,-25+(index/3)*105));
         int z = 8-(index/3)*3;
-        enemy.index = index;
-        [_layer addChild:enemy z:z];
+        enemy->_index = index;
+        _layer->addChild(enemy, z);
     }
     return enemy;
 }
 
 
--(BaseCharacter *)createBoss:(BaseCharacter *)boss at:(int)index{
-    [boss setState:standby];
-    boss.charDelegate = self;
-    if([boss initSprite]){
-        [self setSpritePositon:boss at:index];
-        [_layer addChild:boss];
+BaseCharacter* Logic::createBoss(BaseCharacter *boss,int index){
+    boss->setState(_standby);
+  //  boss->charDelegate = this;
+    if(boss->initSprite()){
+        this->setSpritePositon(boss,index);
+        _layer->addChild(boss);
     }
     return boss;
 }
 
--(void)setSpritePositon:(BaseCharacter *)boss at:(int)index{
+void Logic::setSpritePositon(BaseCharacter *boss, int index){
     if(boss != nil){
-        boss.position =  CGPointMake(50+(index%3)*110,-25+(index/3)*105);
-        boss.zOrder = 8-(index/3)*3;//
-        boss.index = index;
+        boss->setPosition(CCPointMake(50+(index%3)*110,-25+(index/3)*105));
+        boss->setOrderOfArrival(8-(index/3)*3);//
+        boss->_index = index;
     }
 }
 
@@ -79,42 +69,41 @@
 
 
 
--(BaseCharacter*)getEnemy{
+BaseCharacter* Logic::getEnemy(){
     int ran = arc4random()%7;
-    NSLog(@"回目= %2d",ran);
+    //NSLog(@"回目= %2d",ran);
     switch (ran) {
         case 0:
-            return [Siheng spriteWithFile];
+            return (BaseCharacter *) Siheng::spriteWithFile();
         case 1:
-            return [Siha spriteWithFile];
+            return Siha::spriteWithFile();
         case 2:
-            return [Sibao spriteWithFile];
+            return Sibao::spriteWithFile();
         case 3:
-            return [Sihei spriteWithFile];
+            return Sihei::spriteWithFile();
         case 4:
-            return [HuangjinSiha spriteWithFile];
+            return HuangjinSiha::spriteWithFile();
         case 5:
-            return [HuangjinSihei spriteWithFile];
+            return HuangjinSihei::spriteWithFile();
         case 6:
-            return [HuangjinSiheng spriteWithFile];
+            return HuangjinSiheng::spriteWithFile();
         case 7:
-            return [BossZhangjiao spriteWithFile];
+            return BossZhangjiao::spriteWithFile();
         default:
             return nil;
             break;
     }
 }
 
--(void)onCharacterDead:(CGPoint)location sender:(CCSprite *)sender{
-    int index = [_enemyBox indexOfObject:sender];
-    NSLog(@"dead at %d",index);
-    
-    [_enemyBox replaceObjectAtIndex:index withObject:[NSNull null]];
+void Logic::onCharacterDead(CCPoint location,CCSprite *sender){
+    int index = _enemyBox->indexOfObject(sender);
+   // NSLog(@"dead at %d",index);
+    _enemyBox->replaceObjectAtIndex(index,NULL);
 }
 
 
--(void)onBeforeCharacterDead:(CCSprite *)sender{
-    Coin *coin = [Coin spriteWithFile];
+void CharacterDelegate::onBeforeCharacterDead(CCSprite *sender){
+    Coin *coin = Coin::spriteWithFile();
     if([coin initSprite]){
         coin.position = ccp(sender.position.x,sender.position.y);
         coin.world = self.world;
@@ -128,19 +117,20 @@
 }
 
 
--(void)onInjureGirl:(CCSprite *)sender{
-    [charDelegate onInjureGirl:sender];
+void CharacterDelegate::onInjureGirl(CCSprite *sender){
+    charDelegate->onInjureGirl(sender);
 }
 
--(void)onKillBoss:(CCSprite *)sender{
+
+void CharacterDelegate::onKillBoss(CCSprite *sender){
     [charDelegate onKillBoss:sender];
 }
 
--(void)onInjureBoss:(CGPoint)location sender:(CCSprite *)sender bossBloodRate:(float)rate{
+void CharacterDelegate::onInjureBoss(CCPoint location ,CCSprite *sender ,float rate){
     [charDelegate onInjureBoss:location sender:sender bossBloodRate:rate];
 }
 
--(void)onCoinDisappear:(CCSprite *)sender{
+void ItemDelegate::onCoinDisappear(CCSprite *sender){
     NSLock *arrayLock = [[NSLock alloc] init];
     [arrayLock lock];
     int index = [_coinBox indexOfObject:sender];
@@ -154,7 +144,7 @@
     [arrayLock unlock];
 }
 
--(int)showEnemey:(int)tickCnt{
+int Logic::showEnemey:(int tickCnt){
     return 0;
 }
 

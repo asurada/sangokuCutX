@@ -33,48 +33,32 @@ class BaseCharacter : public CCSprite
     
     
 private:
-  
-    float _moveUpSpeed;
-    float _moveDownSpeed;
-    float _waitingTime;
-    float _intervalSpaceMove;
-   
-    float original_Y;
-    
-    std::string _name;
-    
     bool _hasAttack;
-    
-    
-    
-
-   
-   
     void attack();
-    
     void action();
     void hit(float direction);
-    void moveUp();
-    void moveDown();
     void loadNormalAnim();
     void loadInjureAnim();
     void loadDeadAnim();
     void loadAttackAnim();
-   
-    
-
     state getState();
     void setScaleX();
-    void setState(state stt);
 public:
     int   _index;
     state _state;
     
+    float _moveUpSpeed;
+    float _moveDownSpeed;
+    float _waitingTime;
+    float _intervalSpaceMove;
+    float original_Y;
+
     float _hp;
     float _allHp;
     float _injureHp;
-    char  *_hidSound;
-    char  *_deadSound;
+    std::string  _hidSound;
+    std::string  _deadSound;
+    std::string  _name;
     
     CCAnimation *_injureAnim;
     CCAnimation  *_normalAnim;
@@ -88,14 +72,16 @@ public:
     CCAnimation  *_downAction;
     virtual void injure(float direction);
     void finishDead();
+    void setState(state stt);
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     virtual bool initSprite();
     virtual void finishMoveDown();
     virtual void finishMoveUp();
     virtual void dead(float direction);
-    
-    CCObject spriteWithFile();
+    virtual void moveUp();
+    virtual void moveDown();
+    static BaseCharacter *spriteWithFile();
     void finishInjure();
     void stopAction();
     void normal();

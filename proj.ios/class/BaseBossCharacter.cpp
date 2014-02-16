@@ -62,7 +62,7 @@ void BaseBossCharacter::dead(float direction){
         this->setPosition(ccp(this->getPosition().x+(3*this->getPosition().x), this->getPosition().y+50));
         this->setOrderOfArrival((10-_index/3)*3);
         
-        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound);
+        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound.data());
         delegate->onBeforeCharacterDead(this);
         delegate->onKillBoss(this);
         
@@ -87,7 +87,7 @@ void BaseBossCharacter::injure(float direction){
         }
         preDirection = direction;
         _state = _injure;
-        SimpleAudioEngine::sharedEngine()->playEffect(_hidSound);
+        SimpleAudioEngine::sharedEngine()->playEffect(_hidSound.data());
         this->stopNormalAction();
       
         CCAnimate *injureAnimation = CCAnimate::create(_injureAnim);

@@ -16,7 +16,7 @@ using namespace cocos2d;
 class ItemDelegate{
     public :
        void onCoinGot(CCSprite *sender);
-       void onCoinDisappear:(CCSprite *sender);
+       void onCoinDisappear(CCSprite *sender);
 };
 
 #endif /* defined(__sangokuCutX__ItemDelegate__) */

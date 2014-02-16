@@ -237,6 +237,11 @@
 		8641709218AA50F7001CE902 /* BossZhangjiao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709018AA50F7001CE902 /* BossZhangjiao.cpp */; };
 		8641709518AA510B001CE902 /* Sibao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709318AA510B001CE902 /* Sibao.cpp */; };
 		8641709818AA512E001CE902 /* Sihei.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709618AA512E001CE902 /* Sihei.cpp */; };
+		8641709C18B07F47001CE902 /* Coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709A18B07F47001CE902 /* Coin.cpp */; };
+		8641709F18B07F5F001CE902 /* CoinEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641709D18B07F5F001CE902 /* CoinEffect.cpp */; };
+		864170A218B07F6B001CE902 /* Number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A018B07F6B001CE902 /* Number.cpp */; };
+		864170A518B07F79001CE902 /* NumberLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A318B07F79001CE902 /* NumberLabel.cpp */; };
+		864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A618B0E0D2001CE902 /* GLES-Render.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
@@ -980,6 +985,16 @@
 		8641709418AA510B001CE902 /* Sibao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sibao.h; sourceTree = "<group>"; };
 		8641709618AA512E001CE902 /* Sihei.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sihei.cpp; sourceTree = "<group>"; };
 		8641709718AA512E001CE902 /* Sihei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sihei.h; sourceTree = "<group>"; };
+		8641709A18B07F47001CE902 /* Coin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coin.cpp; sourceTree = "<group>"; };
+		8641709B18B07F47001CE902 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		8641709D18B07F5F001CE902 /* CoinEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinEffect.cpp; sourceTree = "<group>"; };
+		8641709E18B07F5F001CE902 /* CoinEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinEffect.h; sourceTree = "<group>"; };
+		864170A018B07F6B001CE902 /* Number.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Number.cpp; sourceTree = "<group>"; };
+		864170A118B07F6B001CE902 /* Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
+		864170A318B07F79001CE902 /* NumberLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NumberLabel.cpp; sourceTree = "<group>"; };
+		864170A418B07F79001CE902 /* NumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberLabel.h; sourceTree = "<group>"; };
+		864170A618B0E0D2001CE902 /* GLES-Render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "GLES-Render.cpp"; sourceTree = SOURCE_ROOT; };
+		864170A818B0E0E2001CE902 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = SOURCE_ROOT; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -2248,6 +2263,21 @@
 			name = logic;
 			sourceTree = "<group>";
 		};
+		8641709918B07F33001CE902 /* item */ = {
+			isa = PBXGroup;
+			children = (
+				8641709A18B07F47001CE902 /* Coin.cpp */,
+				8641709B18B07F47001CE902 /* Coin.h */,
+				8641709D18B07F5F001CE902 /* CoinEffect.cpp */,
+				8641709E18B07F5F001CE902 /* CoinEffect.h */,
+				864170A018B07F6B001CE902 /* Number.cpp */,
+				864170A118B07F6B001CE902 /* Number.h */,
+				864170A318B07F79001CE902 /* NumberLabel.cpp */,
+				864170A418B07F79001CE902 /* NumberLabel.h */,
+			);
+			name = item;
+			sourceTree = "<group>";
+		};
 		A2CBE502189F2BC600D03BB0 /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -2262,6 +2292,9 @@
 		A2CBE503189F2BC600D03BB0 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				864170A818B0E0E2001CE902 /* GLES-Render.h */,
+				864170A618B0E0D2001CE902 /* GLES-Render.cpp */,
+				8641709918B07F33001CE902 /* item */,
 				8641707D18AA4C1E001CE902 /* logic */,
 				8641707318A8B66C001CE902 /* callback */,
 				A2CBE536189F321800D03BB0 /* base */,
@@ -2330,18 +2363,18 @@
 				8641708218AA501B001CE902 /* Siheng.h */,
 				8641708418AA502C001CE902 /* Siha.cpp */,
 				8641708518AA502C001CE902 /* Siha.h */,
-				8641708718AA5057001CE902 /* HuangjinSiha.cpp */,
 				8641708818AA5057001CE902 /* HuangjinSiha.h */,
-				8641708A18AA5085001CE902 /* HuangjinSihei.cpp */,
+				8641708718AA5057001CE902 /* HuangjinSiha.cpp */,
 				8641708B18AA5085001CE902 /* HuangjinSihei.h */,
-				8641708D18AA50A0001CE902 /* HuangjinSiheng.cpp */,
+				8641708A18AA5085001CE902 /* HuangjinSihei.cpp */,
 				8641708E18AA50A0001CE902 /* HuangjinSiheng.h */,
-				8641709018AA50F7001CE902 /* BossZhangjiao.cpp */,
+				8641708D18AA50A0001CE902 /* HuangjinSiheng.cpp */,
 				8641709118AA50F7001CE902 /* BossZhangjiao.h */,
-				8641709318AA510B001CE902 /* Sibao.cpp */,
+				8641709018AA50F7001CE902 /* BossZhangjiao.cpp */,
 				8641709418AA510B001CE902 /* Sibao.h */,
-				8641709618AA512E001CE902 /* Sihei.cpp */,
+				8641709318AA510B001CE902 /* Sibao.cpp */,
 				8641709718AA512E001CE902 /* Sihei.h */,
+				8641709618AA512E001CE902 /* Sihei.cpp */,
 			);
 			name = enemey;
 			sourceTree = "<group>";
@@ -3111,6 +3144,7 @@
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
 				15A3DA351682F826002FB0C5 /* CCBSequence.cpp in Sources */,
+				8641709F18B07F5F001CE902 /* CoinEffect.cpp in Sources */,
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,
 				46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */,
 				15A3DA371682F826002FB0C5 /* CCBValue.cpp in Sources */,
@@ -3134,6 +3168,7 @@
 				15A3DA461682F826002FB0C5 /* CCScale9SpriteLoader.cpp in Sources */,
 				15A3DA471682F826002FB0C5 /* CCScrollViewLoader.cpp in Sources */,
 				15A3DA481682F826002FB0C5 /* CCSpriteLoader.cpp in Sources */,
+				864170A218B07F6B001CE902 /* Number.cpp in Sources */,
 				15A3DA491682F826002FB0C5 /* CCControl.cpp in Sources */,
 				15A3DA4A1682F826002FB0C5 /* CCControlButton.cpp in Sources */,
 				15A3DA4B1682F826002FB0C5 /* CCControlColourPicker.cpp in Sources */,
@@ -3145,6 +3180,7 @@
 				15A3DA501682F826002FB0C5 /* CCControlStepper.cpp in Sources */,
 				8641708918AA5057001CE902 /* HuangjinSiha.cpp in Sources */,
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
+				864170A518B07F79001CE902 /* NumberLabel.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
 				375BD4C41868411B0024609E /* TriggerBase.cpp in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
@@ -3163,6 +3199,7 @@
 				A2CBE713189F823100D03BB0 /* SceneOption.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				8641709C18B07F47001CE902 /* Coin.cpp in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
@@ -3237,6 +3274,7 @@
 				375BD50E1868454E0024609E /* CCActionEaseEx.cpp in Sources */,
 				379BB9C117F03F3700829B88 /* UICheckBox.cpp in Sources */,
 				379BB9C217F03F3700829B88 /* UIImageView.cpp in Sources */,
+				864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */,
 				379BB9C317F03F3700829B88 /* UILabel.cpp in Sources */,
 				379BB9C417F03F3700829B88 /* UILabelAtlas.cpp in Sources */,
 				A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */,

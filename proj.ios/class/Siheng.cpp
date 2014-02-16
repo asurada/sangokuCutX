@@ -7,24 +7,27 @@
 //
 
 #include "Siheng.h"
+#include "cocos2d.h"
 
+using namespace BaseCharacterSpace;
+using BaseCharacterSpace::state;
+using cocos2d::CCSprite;
 
-CCObject Siheng::spriteWithFile(){
-    return super::spriteWithSpriteFrameName("Siheng_normal_1.png");
+BaseCharacter *Siheng::spriteWithFile(){
+    return (BaseCharacter *)super::createWithSpriteFrameName("Siheng_normal_1.png");
 }
 
 
-bool initSprite(){
-    super->initSprite();
+bool Siheng::initSprite(){
+    super::BaseCharacter::initSprite();
     _hp = 1;
     _injureHp = 2;
     _intervalSpaceMove = 125;
     _moveUpSpeed =.3f;
     _moveDownSpeed =.3f;
     _waitingTime = .8f;
-    _name = @"siheng";
-    return YES;
-    
+    _name = "siheng";
+    return true;
 }
 
 
@@ -57,32 +60,35 @@ void Siheng::loadAttackAnim(){
 
 
 void Siheng::loadDeadAnim(){
-    self.deadSound  = @"fingerHit_6.caf";
-    NSMutableArray *deadAnimFrames = [NSMutableArray array];
+    _deadSound  = "fingerHit_6.caf";
+    char* fn = new char;
+    CCArray *deadAnimFrames = CCArray::create();
     for (int i=1; i<=56; i++) {
-        [deadAnimFrames addObject:
-         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-          [NSString stringWithFormat:@"Siheng_dead_%d.png",i]]];
+        sprintf(fn, "Siheng_dead_%d.png", i);
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(fn);
+        deadAnimFrames->addObject(pFrame);
     }
-    self.deadAnim = [CCAnimation animationWithSpriteFrames:deadAnimFrames delay:0.03333f];
+    _deadAnim = CCAnimation::create(deadAnimFrames, 0.03333f);
 }
 
 
 void Siheng::loadNormalAnim(){
-    NSMutableArray *normalAnimFrames = [NSMutableArray array];
+    char* fn = new char;
+    CCArray *normalAnimFrames = CCArray::create();
     for (int i=1; i<=14; i++) {
-        [normalAnimFrames addObject:
-         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-          [NSString stringWithFormat:@"Siheng_normal_%d.png",i]]];
+        sprintf(fn, "Siheng_normal_%d.png", i);
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(fn);
+        normalAnimFrames->addObject(pFrame);
     }
-    self.normalAnim = [CCAnimation animationWithSpriteFrames:normalAnimFrames delay:0.03333];
+    _normalAnim = CCAnimation::create(normalAnimFrames, 0.03333f);
     
 }
 
 
 
-
+/*
 void dealloc(){
-    [super dealloc];
+   
 }
 
+*/

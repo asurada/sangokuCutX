@@ -38,7 +38,7 @@ void BaseCharacter::setScaleX(){
 }
 
 void BaseCharacter::injure(float direction){
-    SimpleAudioEngine::sharedEngine()->playEffect(_hidSound);
+    SimpleAudioEngine::sharedEngine()->playEffect(_hidSound.data());
     if(_state != _injure){
         if(_hp >0){
             _hp--;
@@ -84,7 +84,7 @@ void BaseCharacter::dead(float direction){
     
         this->setOrderOfArrival(10-(_index/3)*3);//
         this->setPosition(ccp(this->getPosition().x+(3*this->getScaleX()), this->getPosition().y+50));
-        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound);
+        SimpleAudioEngine::sharedEngine()->playEffect(_deadSound.data());
         delegate->onBeforeCharacterDead(this);
         CCAnimate *animation = CCAnimate::create(_deadAnim);
         CCRepeat *action = CCRepeat::create(animation,1);;

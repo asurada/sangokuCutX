@@ -9,6 +9,21 @@
 #ifndef __sangokuCutX__BossZhangjiao__
 #define __sangokuCutX__BossZhangjiao__
 
-#include <iostream>
+#include "BaseCharacter.h"
+#include "BaseBossCharacter.h"
 
-#endif /* defined(__sangokuCutX__BossZhangjiao__) */
+
+class BossZhangjiao:public BaseBossCharacter{
+    
+public:
+    typedef BaseCharacter super;
+    static BaseCharacter* spriteWithFile();
+    bool initSprite();
+    virtual void loadInjureAnim();
+    virtual void loadAttackAnim();
+    virtual void loadDeadAnim();
+    virtual void loadNormalAnim();
+};
+
+
+#endif /* defined(__sangokuCutX__HuangjinSihei__) */

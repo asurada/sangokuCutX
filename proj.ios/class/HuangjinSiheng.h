@@ -9,6 +9,21 @@
 #ifndef __sangokuCutX__HuangjinSiheng__
 #define __sangokuCutX__HuangjinSiheng__
 
-#include <iostream>
+#include "BaseCharacter.h"
 
-#endif /* defined(__sangokuCutX__HuangjinSiheng__) */
+using BaseCharacterSpace::BaseCharacter;
+
+class HuangjinSiheng:public BaseCharacter{
+    
+public:
+    typedef BaseCharacter super;
+    static BaseCharacter *spriteWithFile();
+    bool initSprite();
+    virtual void loadInjureAnim();
+    virtual void loadAttackAnim();
+    virtual void loadDeadAnim();
+    virtual void loadNormalAnim();
+};
+
+
+#endif /* defined(__sangokuCutX__HuangjinSihei__) */

@@ -13,11 +13,12 @@
 
 using namespace BaseCharacterSpace;
 
-class Siheng:BaseCharacter{
+class Siheng: protected BaseCharacter{
     
 public:
     typedef BaseCharacter super;
-    CCObject spriteWithFile();
+    static BaseCharacter* spriteWithFile();
+    bool initSprite();
     virtual void loadInjureAnim();
     virtual void loadAttackAnim();
     virtual void loadDeadAnim();

@@ -14,26 +14,31 @@
 #include "CharacterDelegate.h"
 #include "ItemDelegate.h"
 #include "Box2D.h"
-#include "GLES-Render.h"
 #include "BaseCharacter.h"
+#include "CharacterDelegate.h"
+#include "ItemDelegate.h"
 
-class Logic{
+using namespace BaseCharacterSpace;
+class Logic:CCObject,CharacterDelegate,ItemDelegate{
     
 private:
     int cnt;
-    NSMutableArray *_enemyBox;
-    NSMutableArray *_coinBox;
+    CCArray *_enemyBox;
+    CCArray *_coinBox;
     CCLayer *_layer;
     Logic *_logic;
     bool isMyTurn;
 public:
-    Logic* iniLogic:(Logic *logic);
-    int showEnemey:(int tickCnt,int killedCnt);
+    typedef BaseCharacter super;
+    BaseCharacter* getEnemy();
+    Logic* iniLogic(Logic *logic);
+    int showEnemey(int tickCnt,int killedCnt);
     void loadEnmey();
-    BaseCharacter *createEnemy:(int index);
-    BaseCharacter *createBoss:(BaseCharacter *boss int index);
-    void setSpritePositon:(BaseCharacter *boss,int index);
+    BaseCharacter *createEnemy(int index);
+    BaseCharacter *createBoss(BaseCharacter *boss,int index);
+    void setSpritePositon(BaseCharacter *boss,int index);
     void showBoss();
+    virtual void onCharacterDead(CCPoint location,CCSprite *sender);
 };
 
 

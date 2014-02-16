@@ -9,6 +9,19 @@
 #ifndef __sangokuCutX__HuangjinSiha__
 #define __sangokuCutX__HuangjinSiha__
 
-#include <iostream>
+#include "BaseCharacter.h"
+
+using BaseCharacterSpace::BaseCharacter;
+
+class HuangjinSiha:public BaseCharacter{
+public:
+    typedef BaseCharacter super;
+    static BaseCharacter * spriteWithFile();
+    bool initSprite();
+    virtual void loadInjureAnim();
+    virtual void loadAttackAnim();
+    virtual void loadDeadAnim();
+    virtual void loadNormalAnim();
+};
 
 #endif /* defined(__sangokuCutX__HuangjinSiha__) */
