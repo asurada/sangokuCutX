@@ -8,29 +8,30 @@
 
 #include "CoinEffect.h"
 
-BaseCharacter* CoinEffect::spriteWithFile(){
-    return (BaseCharacter *)super::createWithSpriteFrameName("coinGetEffect_1.png");
+CoinEffect* CoinEffect::spriteWithFile(){
+    return (CoinEffect *)super::createWithSpriteFrameName("coinGetEffect_1.png");
 }
 
 
 bool CoinEffect::initSprite(){
-    
-    NSMutableArray *normalAnimFrames = [NSMutableArray array];
+    char* fn = new char;
+    CCArray *normalAnimFrames = CCArray::create();
     for (int i=1; i<=5; i++) {
-        [normalAnimFrames addObject:
-         [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-          [NSString stringWithFormat:@"coinGetEffect_%d.png",i]]];
+        sprintf(fn, "coinGetEffect_%d.png", i);
+        CCSpriteFrame* pFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(fn);
+        normalAnimFrames->addObject(pFrame);
     }
     
-    id coinAnim = [CCAnimation animationWithSpriteFrames:normalAnimFrames delay:0.041f];
-    id coinAction = [CCAnimate actionWithAnimation:coinAnim];
+    CCAnimation *coinAnim = CCAnimation::create(normalAnimFrames, 0.041f);
+    CCAnimate *coinAction = CCAnimate::create(coinAnim);
     
-    id callback = [CCCallFunc actionWithTarget:self selector:@selector(coinDisappear)];
-    [self runAction:[CCSequence actions:coinAction,callback,nil]];
-    return YES;
+    
+    CCCallFunc *callback = CCCallFunc::create(this, callfunc_selector(CoinEffect::coinDisappear));
+    this->runAction(CCSequence::create(coinAction,callback));
+    return true;
     
 }
 
--(void)coinDisappear{
-    [self removeFromParentAndCleanup:YES];
+void CoinEffect::coinDisappear(){
+    this->removeAllChildrenWithCleanup(true);
 }

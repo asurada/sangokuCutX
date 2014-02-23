@@ -8,7 +8,17 @@
 
 #ifndef __sangokuCutX__NumberLabel__
 #define __sangokuCutX__NumberLabel__
+#include "BaseCharacter.h"
+using namespace BaseCharacterSpace;
 
-#include <iostream>
+class NumberLabel:CCSprite{
+  public:
+    int number;
+    CCArray* numList;
+    void showNum(int num);
+    typedef BaseCharacter super;
+    static NumberLabel* spriteWithFile(string name);
+    virtual CCSprite* create();
+};
 
 #endif /* defined(__sangokuCutX__NumberLabel__) */

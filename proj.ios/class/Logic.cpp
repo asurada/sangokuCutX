@@ -25,7 +25,7 @@ Logic* Logic::iniLogic(Logic *lgc){
     this->_logic = lgc;
     _enemyBox = CCArray::create();
     _coinBox = CCArray::create();
-    return new Logic();
+    return this;
 }
 
 void Logic::loadEnmey(){
@@ -102,49 +102,49 @@ void Logic::onCharacterDead(CCPoint location,CCSprite *sender){
 }
 
 
-void CharacterDelegate::onBeforeCharacterDead(CCSprite *sender){
+void Logic::onBeforeCharacterDead(CCSprite *sender){
     Coin *coin = Coin::spriteWithFile();
-    if([coin initSprite]){
-        coin.position = ccp(sender.position.x,sender.position.y);
-        coin.world = self.world;
-        [coin initPhysics];
-        [coin setVelocityDirection:sender.scaleX];
-        [_layer addChild:coin z:sender.zOrder+10];
-        [_coinBox addObject:coin];
+    if(coin->initSprite()){
+        coin->setPosition(ccp(sender->getPosition().x,sender->getPosition().y));
+        coin->_world= b2World;
+        coin->initPhysics();
+        coin->setVelocityDirection(sender->getScaleX());
+        _layer->addChild(coin, sender->getOrderOfArrival()+10);
     }
     
-    [charDelegate onBeforeCharacterDead:sender];
+     charDelegate->onBeforeCharacterDead(sender);
 }
 
 
-void CharacterDelegate::onInjureGirl(CCSprite *sender){
+void Logic::onInjureGirl(CCSprite *sender){
     charDelegate->onInjureGirl(sender);
 }
 
 
-void CharacterDelegate::onKillBoss(CCSprite *sender){
-    [charDelegate onKillBoss:sender];
+void Logic::onKillBoss(CCSprite *sender){
+    charDelegate->onKillBoss(sender);
 }
 
-void CharacterDelegate::onInjureBoss(CCPoint location ,CCSprite *sender ,float rate){
-    [charDelegate onInjureBoss:location sender:sender bossBloodRate:rate];
+void Logic::onInjureBoss(CCPoint location ,CCSprite *sender ,float rate){
+    charDelegate->onInjureBoss(location,sender,rate);
 }
 
-void ItemDelegate::onCoinDisappear(CCSprite *sender){
-    NSLock *arrayLock = [[NSLock alloc] init];
-    [arrayLock lock];
-    int index = [_coinBox indexOfObject:sender];
+void Logic::onCoinDisappear(CCSprite *sender){
+    //CCLock *cl;
+    //cl->lockf(<#int#>, <#int#>, <#off_t#>)
+    int index = _coinBox->indexOfObject(sender);
     if(index >= 0){
-        NSMutableArray *copy = [_coinBox mutableCopy];
-        [copy removeObjectAtIndex:index];
-        _coinBox = [copy mutableCopy];
-        [copy release];
+        CCArray *copy =(CCArray* )_coinBox->copy();
+        copy->removeObjectAtIndex(index);
+        _coinBox = (CCArray*)copy->copy();
+        copy->release();
         
     }
-    [arrayLock unlock];
+   // unlockpt(1)
+    
 }
 
-int Logic::showEnemey:(int tickCnt){
+int Logic::showEnemey(int tickCnt){
     return 0;
 }
 

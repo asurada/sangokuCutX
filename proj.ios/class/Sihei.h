@@ -24,7 +24,6 @@ public:
     virtual void loadAttackAnim();
     virtual void loadDeadAnim();
     virtual void loadNormalAnim();
-    virtual void injure();
     void finishInjure();
 };
 

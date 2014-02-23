@@ -30,7 +30,7 @@ bool HuangjinSiheng::initSprite(){
 }
 
 
-void BaseCharacter::loadInjureAnim(){
+void HuangjinSiheng::loadInjureAnim(){
     /*
      NSMutableArray *injureAnimFrames = [NSMutableArray array];
      for (int i=1; i<=12; i++) {
@@ -44,7 +44,7 @@ void BaseCharacter::loadInjureAnim(){
 
 
 
-void BaseCharacter::loadAttackAnim(){
+void HuangjinSiheng::loadAttackAnim(){
     /*
      NSMutableArray *attackAnimFrames = [NSMutableArray array];
      for (int i=1; i<=12; i++) {

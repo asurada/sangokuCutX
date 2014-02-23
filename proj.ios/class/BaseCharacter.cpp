@@ -203,3 +203,20 @@ void BaseCharacter::stopNormalAction(){
     _attackAction->stop();
     _injureAction->stop();
 }
+
+void BaseCharacter::loadNormalAnim(){
+    
+}
+void BaseCharacter::loadInjureAnim(){
+    
+}
+void BaseCharacter::loadDeadAnim(){
+    
+}
+void BaseCharacter::loadAttackAnim(){
+    
+}
+
+bool BaseCharacter::init(){
+    
+}

@@ -18,26 +18,35 @@
 #include "CoinEffect.h"
 #include "CharacterDelegate.h"
 
-class Coin : CCSprite{
+class Coin : public CCSprite{
     
 public:
-    CharacterDelegate *_charDelegate;
     b2World *_world;
     b2Fixture *_ballFixture;
     b2BodyDef ballBodyDef;
     b2Body * ballBody;
+public:
+    CharacterDelegate *_charDelegate;
     b2FixtureDef ballShapeDef;
     CoinEffect *effect;
     bool _hasGot;
-    BaseCharacter* spriteWithFile();
+    static Coin* spriteWithFile();
     bool initSprite();
     void gotCoin();
     void initPhysics();
     void coinDisappear();
     void setVelocityDirection(float direction);
-    void gotoCoin:(CCPoint postition);
+    void gotoCoin(CCPoint postition);
+    void blink_slow();
+    void blink_fast();
+    void onEnlargeCoin();
+    void onCoinTouch();
+    void blink();
+    typedef CCSprite super;
+    CCAction *coinAction;
+    CharacterDelegate* charDelegate;
     
-}
+};
 //@property (nonatomic, strong)  id<CharacterDelegate> charDelegate;
 //@property (nonatomic, strong) CCAction *coinAction;
 //@property(nonatomic,assign)b2World *world;

@@ -100,6 +100,9 @@ void BaseBossCharacter::injure(float direction){
     
 }
 
+void BaseBossCharacter::finishMoveUp(){
+    
+}
 
 void BaseBossCharacter::finishInjure(){
     this->normal();

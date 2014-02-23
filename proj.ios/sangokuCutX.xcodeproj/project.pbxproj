@@ -242,6 +242,7 @@
 		864170A218B07F6B001CE902 /* Number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A018B07F6B001CE902 /* Number.cpp */; };
 		864170A518B07F79001CE902 /* NumberLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A318B07F79001CE902 /* NumberLabel.cpp */; };
 		864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A618B0E0D2001CE902 /* GLES-Render.cpp */; };
+		864170AB18BA0725001CE902 /* Logic_Showup_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A918BA0725001CE902 /* Logic_Showup_01.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
@@ -995,6 +996,8 @@
 		864170A418B07F79001CE902 /* NumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberLabel.h; sourceTree = "<group>"; };
 		864170A618B0E0D2001CE902 /* GLES-Render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "GLES-Render.cpp"; sourceTree = SOURCE_ROOT; };
 		864170A818B0E0E2001CE902 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = SOURCE_ROOT; };
+		864170A918BA0725001CE902 /* Logic_Showup_01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logic_Showup_01.cpp; sourceTree = "<group>"; };
+		864170AA18BA0725001CE902 /* Logic_Showup_01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logic_Showup_01.h; sourceTree = "<group>"; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -2259,6 +2262,8 @@
 			children = (
 				8641707E18AA4C56001CE902 /* Logic.cpp */,
 				8641707F18AA4C56001CE902 /* Logic.h */,
+				864170A918BA0725001CE902 /* Logic_Showup_01.cpp */,
+				864170AA18BA0725001CE902 /* Logic_Showup_01.h */,
 			);
 			name = logic;
 			sourceTree = "<group>";
@@ -3114,6 +3119,7 @@
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,
 				15A3D99A1682F7F9002FB0C5 /* cpGearJoint.c in Sources */,
 				15A3D99B1682F7F9002FB0C5 /* cpGrooveJoint.c in Sources */,
+				864170AB18BA0725001CE902 /* Logic_Showup_01.cpp in Sources */,
 				15A3D99C1682F7F9002FB0C5 /* cpPinJoint.c in Sources */,
 				A2CBE719189F828F00D03BB0 /* BaseCharacter.cpp in Sources */,
 				15A3D99D1682F7F9002FB0C5 /* cpPivotJoint.c in Sources */,

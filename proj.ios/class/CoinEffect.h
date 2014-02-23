@@ -12,13 +12,15 @@
 
 using namespace BaseCharacterSpace;
 
-class CoinEffect:CCSprite{
+class CoinEffect:public CCSprite{
    
 public:
     typedef BaseCharacter super;
-    static BaseCharacter* spriteWithFile();
+    static CoinEffect* spriteWithFile();
     bool initSprite();
+    void coinDisappear();
 
 };
+
 
 #endif /* defined(__sangokuCutX__CoinEffect__) */

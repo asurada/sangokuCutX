@@ -37,11 +37,7 @@ private:
     void attack();
     void action();
     void hit(float direction);
-    void loadNormalAnim();
-    void loadInjureAnim();
-    void loadDeadAnim();
-    void loadAttackAnim();
-    state getState();
+    
     void setScaleX();
 public:
     int   _index;
@@ -73,6 +69,7 @@ public:
     virtual void injure(float direction);
     void finishDead();
     void setState(state stt);
+    state getState();
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     virtual bool initSprite();
@@ -87,6 +84,10 @@ public:
     void normal();
     void stopNormalAction();
     CharacterDelegate *delegate;
+    void loadNormalAnim();
+    void loadInjureAnim();
+    void loadDeadAnim();
+    void loadAttackAnim();
 
     // implement the "static node()" method manually
     CREATE_FUNC(BaseCharacter);

@@ -19,17 +19,19 @@
 #include "ItemDelegate.h"
 
 using namespace BaseCharacterSpace;
-class Logic:CCObject,CharacterDelegate,ItemDelegate{
+class Logic:public CCObject, public CharacterDelegate, public ItemDelegate{
     
 private:
+    CCArray *_coinBox;
+public:
     int cnt;
     CCArray *_enemyBox;
-    CCArray *_coinBox;
     CCLayer *_layer;
     Logic *_logic;
     bool isMyTurn;
-public:
+    CharacterDelegate *charDelegate;
     typedef BaseCharacter super;
+    b2World *b2World;
     BaseCharacter* getEnemy();
     Logic* iniLogic(Logic *logic);
     int showEnemey(int tickCnt,int killedCnt);
@@ -39,6 +41,12 @@ public:
     void setSpritePositon(BaseCharacter *boss,int index);
     void showBoss();
     virtual void onCharacterDead(CCPoint location,CCSprite *sender);
+    void onBeforeCharacterDead(CCSprite *sender);
+    void onInjureGirl(CCSprite *sender);
+    void onKillBoss(CCSprite *sender);
+    void onInjureBoss(CCPoint location ,CCSprite *sender ,float rate);
+    void onCoinDisappear(CCSprite *sender);
+    int showEnemey(int tickCnt);
 };
 
 
