@@ -59,8 +59,10 @@ int Logic_Showup_01::getPosition(){
     
 }
 
-bool Logic_Showup_01::create(){
-    
+
+
+Logic_Showup_01::Logic_Showup_01(void)
+{
     _enemyCount = KILLCOUNT;
     _enemyMoveUpSpeed = .3;
     _enemyMoveDownSpeed=.3;
@@ -69,11 +71,7 @@ bool Logic_Showup_01::create(){
     _intervalTime= 20;
     _enemyWaitingTime = .8;
     _bossWaitingTime = 2;
-    return super::create();
 }
-
-
-
 
 
 int Logic_Showup_01::showEnemey(int tickCnt,int killedCnt){

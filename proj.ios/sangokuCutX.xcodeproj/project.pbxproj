@@ -227,6 +227,7 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
+		862C510218BB86FE00711A2F /* ResourceLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 862C510018BB86FE00711A2F /* ResourceLoad.cpp */; };
 		8641707918A8DD1B001CE902 /* BaseBossCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */; };
 		8641708018AA4C56001CE902 /* Logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641707E18AA4C56001CE902 /* Logic.cpp */; };
 		8641708318AA501B001CE902 /* Siheng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8641708118AA501B001CE902 /* Siheng.cpp */; };
@@ -243,6 +244,9 @@
 		864170A518B07F79001CE902 /* NumberLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A318B07F79001CE902 /* NumberLabel.cpp */; };
 		864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A618B0E0D2001CE902 /* GLES-Render.cpp */; };
 		864170AB18BA0725001CE902 /* Logic_Showup_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 864170A918BA0725001CE902 /* Logic_Showup_01.cpp */; };
+		866B002818C4AE73002A9017 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002618C4AE73002A9017 /* GameScene.cpp */; };
+		866B002B18C4B3A3002A9017 /* EnemyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002918C4B3A3002A9017 /* EnemyData.cpp */; };
+		866B003118C4B3E2002A9017 /* CCButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002F18C4B3E2002A9017 /* CCButton.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
@@ -964,6 +968,8 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		862C510018BB86FE00711A2F /* ResourceLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceLoad.cpp; sourceTree = "<group>"; };
+		862C510118BB86FE00711A2F /* ResourceLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoad.h; sourceTree = "<group>"; };
 		8641707518A8B688001CE902 /* CharacterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDelegate.h; sourceTree = "<group>"; };
 		8641707718A8DD1B001CE902 /* BaseBossCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseBossCharacter.cpp; sourceTree = "<group>"; };
 		8641707818A8DD1B001CE902 /* BaseBossCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBossCharacter.h; sourceTree = "<group>"; };
@@ -998,6 +1004,12 @@
 		864170A818B0E0E2001CE902 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = SOURCE_ROOT; };
 		864170A918BA0725001CE902 /* Logic_Showup_01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logic_Showup_01.cpp; sourceTree = "<group>"; };
 		864170AA18BA0725001CE902 /* Logic_Showup_01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logic_Showup_01.h; sourceTree = "<group>"; };
+		866B002618C4AE73002A9017 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		866B002718C4AE73002A9017 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		866B002918C4B3A3002A9017 /* EnemyData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyData.cpp; sourceTree = "<group>"; };
+		866B002A18C4B3A3002A9017 /* EnemyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyData.h; sourceTree = "<group>"; };
+		866B002F18C4B3E2002A9017 /* CCButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCButton.cpp; sourceTree = "<group>"; };
+		866B003018C4B3E2002A9017 /* CCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCButton.h; sourceTree = "<group>"; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -2306,6 +2318,10 @@
 				A2CBE535189F321100D03BB0 /* enemey */,
 				A2CBE534189F320900D03BB0 /* data */,
 				A2CBE533189F320200D03BB0 /* scene */,
+				862C510018BB86FE00711A2F /* ResourceLoad.cpp */,
+				862C510118BB86FE00711A2F /* ResourceLoad.h */,
+				866B002F18C4B3E2002A9017 /* CCButton.cpp */,
+				866B003018C4B3E2002A9017 /* CCButton.h */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -2346,6 +2362,8 @@
 				A2CBE712189F823100D03BB0 /* SceneOption.h */,
 				A2CBE714189F824800D03BB0 /* SceneRanking.cpp */,
 				A2CBE715189F824800D03BB0 /* SceneRanking.h */,
+				866B002618C4AE73002A9017 /* GameScene.cpp */,
+				866B002718C4AE73002A9017 /* GameScene.h */,
 			);
 			name = scene;
 			sourceTree = "<group>";
@@ -2353,6 +2371,8 @@
 		A2CBE534189F320900D03BB0 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				866B002918C4B3A3002A9017 /* EnemyData.cpp */,
+				866B002A18C4B3A3002A9017 /* EnemyData.h */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -2773,6 +2793,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 479CUL536Y;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "sangokuCutX" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3074,6 +3099,7 @@
 				15A3D90B1682F7D5002FB0C5 /* b2BlockAllocator.cpp in Sources */,
 				A2CBE716189F824800D03BB0 /* SceneRanking.cpp in Sources */,
 				15A3D90C1682F7D5002FB0C5 /* b2Draw.cpp in Sources */,
+				862C510218BB86FE00711A2F /* ResourceLoad.cpp in Sources */,
 				375BD4C61868411B0024609E /* TriggerObj.cpp in Sources */,
 				375BD4C31868411B0024609E /* ObjectFactory.cpp in Sources */,
 				15A3D90D1682F7D5002FB0C5 /* b2Math.cpp in Sources */,
@@ -3119,6 +3145,7 @@
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,
 				15A3D99A1682F7F9002FB0C5 /* cpGearJoint.c in Sources */,
 				15A3D99B1682F7F9002FB0C5 /* cpGrooveJoint.c in Sources */,
+				866B003118C4B3E2002A9017 /* CCButton.cpp in Sources */,
 				864170AB18BA0725001CE902 /* Logic_Showup_01.cpp in Sources */,
 				15A3D99C1682F7F9002FB0C5 /* cpPinJoint.c in Sources */,
 				A2CBE719189F828F00D03BB0 /* BaseCharacter.cpp in Sources */,
@@ -3272,6 +3299,7 @@
 				379BB9B617F03F3700829B88 /* UILayoutParameter.cpp in Sources */,
 				379BB9B717F03F3700829B88 /* UILayoutDefine.cpp in Sources */,
 				379BB9B817F03F3700829B88 /* CocosGUI.cpp in Sources */,
+				866B002B18C4B3A3002A9017 /* EnemyData.cpp in Sources */,
 				379BB9B917F03F3700829B88 /* UIHelper.cpp in Sources */,
 				379BB9BD17F03F3700829B88 /* UIListView.cpp in Sources */,
 				379BB9BE17F03F3700829B88 /* UIPageView.cpp in Sources */,
@@ -3282,6 +3310,7 @@
 				379BB9C217F03F3700829B88 /* UIImageView.cpp in Sources */,
 				864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */,
 				379BB9C317F03F3700829B88 /* UILabel.cpp in Sources */,
+				866B002818C4AE73002A9017 /* GameScene.cpp in Sources */,
 				379BB9C417F03F3700829B88 /* UILabelAtlas.cpp in Sources */,
 				A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */,
 				379BB9C517F03F3700829B88 /* UILabelBMFont.cpp in Sources */,
@@ -3310,8 +3339,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -3360,8 +3389,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3407,7 +3436,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
@@ -3421,7 +3450,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Yan (EMHM4XY2B6)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";

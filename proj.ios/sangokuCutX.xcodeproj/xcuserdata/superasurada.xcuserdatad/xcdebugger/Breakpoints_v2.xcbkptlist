@@ -30,21 +30,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
-            endingLineNumber = "43">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "class/Number.cpp"
-            timestampString = "414742339.99211"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10">
+            endingLineNumber = "43"
+            landmarkName = "class Coin"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -77,6 +65,36 @@
             endingLineNumber = "137"
             landmarkName = "Logic::onCoinDisappear(CCSprite *sender)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Logic::onCoinDisappear(cocos2d::CCSprite*)"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/Logic.cpp"
+                  timestampString = "414940943.275272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to Logic::onCoinDisappear(cocos2d::CCSprite*)"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/Logic.cpp"
+                  timestampString = "414940943.275689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -85,12 +103,112 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "class/Logic_Showup_01.h"
-            timestampString = "414845542.788525"
+            filePath = "class/Sihei.h"
+            timestampString = "414868995.355099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29">
+            startingLineNumber = "1"
+            endingLineNumber = "1">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sihei::~Sihei()"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/BaseCharacter.h"
+                  timestampString = "414940943.319913"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "3">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sihei::~Sihei()"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/Sihei.h"
+                  timestampString = "414940943.320234"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sihei::~Sihei()"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/BaseCharacter.h"
+                  timestampString = "414940943.320483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "3">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sihei::~Sihei()"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/Sihei.h"
+                  timestampString = "414940943.320697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sihei::~Sihei()"
+                  moduleName = "sangokuCutX"
+                  urlString = "file:///Users/superasurada/project/cocos2d-x-2.2.2/project/sangokuCutX/proj.ios/class/Sihei.h"
+                  timestampString = "414940943.320929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "218">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "class/ResourceLoad.cpp"
+            timestampString = "414943231.07145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "class/ResourceLoad.cpp"
+            timestampString = "414943234.164395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

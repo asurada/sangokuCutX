@@ -39,7 +39,7 @@ class Logic_Showup_01 : public Logic{
     int posDiff = 0;
     int sequence = 0;
 public:
-    bool virtual create();
+    Logic_Showup_01(void);
     int getPosition();
     int showEnemey(int tickCnt,int killedCnt);
     void showBoss();
