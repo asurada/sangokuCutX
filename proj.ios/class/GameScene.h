@@ -54,7 +54,7 @@ public:
     void addNewSpriteAtPosition(CCPoint point);
     static CCScene* scene();
     virtual bool init();
-    
+    void initBackground_iphone5();
     CREATE_FUNC(GameScene);
 };
 
