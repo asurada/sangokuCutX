@@ -246,19 +246,11 @@
 		866B002818C4AE73002A9017 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002618C4AE73002A9017 /* GameScene.cpp */; };
 		866B002B18C4B3A3002A9017 /* EnemyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002918C4B3A3002A9017 /* EnemyData.cpp */; };
 		866B003118C4B3E2002A9017 /* CCButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002F18C4B3E2002A9017 /* CCButton.cpp */; };
-<<<<<<< HEAD
-		86B37B0D18D5B2C60058A868 /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */; };
-		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
-		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
-		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
-		A2CBE531189F31CE00D03BB0 /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */; };
-=======
+		9CAB83CE18D5C8E900F20A15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB83CD18D5C8E900F20A15 /* CoreGraphics.framework */; };
 		9CAE71DE18C60D66000F4A23 /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
-		A2CBE532189F31CE00D03BB0 /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */; };
->>>>>>> FETCH_HEAD
 		A2CBE539189F333F00D03BB0 /* SceneStartup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */; };
 		A2CBE543189F810200D03BB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE541189F810200D03BB0 /* BaseScene.cpp */; };
 		A2CBE633189F821000D03BB0 /* bg.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2CBE545189F820F00D03BB0 /* bg.plist */; };
@@ -1016,26 +1008,17 @@
 		866B002A18C4B3A3002A9017 /* EnemyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyData.h; sourceTree = "<group>"; };
 		866B002F18C4B3E2002A9017 /* CCButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCButton.cpp; sourceTree = "<group>"; };
 		866B003018C4B3E2002A9017 /* CCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCButton.h; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
-		86B37B0C18D5B2C60058A868 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
-=======
+		9CAB83CD18D5C8E900F20A15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlade.cpp; sourceTree = "<group>"; };
 		9CAE71DD18C60D66000F4A23 /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
->>>>>>> FETCH_HEAD
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
 		A2CBE521189F2EBF00D03BB0 /* PRRatcliffTriangulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRatcliffTriangulator.h; sourceTree = "<group>"; };
 		A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangulate.cpp; sourceTree = "<group>"; };
 		A2CBE523189F2EBF00D03BB0 /* triangulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangulate.h; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlade.cpp; sourceTree = "<group>"; };
-		A2CBE52E189F31CE00D03BB0 /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
-=======
 		A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
 		A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
->>>>>>> FETCH_HEAD
 		A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStartup.cpp; sourceTree = "<group>"; };
 		A2CBE538189F333F00D03BB0 /* SceneStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStartup.h; sourceTree = "<group>"; };
 		A2CBE541189F810200D03BB0 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
@@ -1289,6 +1272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CAB83CE18D5C8E900F20A15 /* CoreGraphics.framework in Frameworks */,
 				15A3DA6A1682F886002FB0C5 /* libcocos2dx.a in Frameworks */,
 				1ACB3244164770DE00914215 /* libcurl.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -1933,6 +1917,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CAB83CD18D5C8E900F20A15 /* CoreGraphics.framework */,
 				1ACB3243164770DE00914215 /* libcurl.a */,
 				BF170DB212928DE900B8313A /* libxml2.dylib */,
 				BF170DB412928DE900B8313A /* libz.dylib */,
@@ -2343,17 +2328,10 @@
 		A2CBE51C189F2EBF00D03BB0 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */,
-				86B37B0C18D5B2C60058A868 /* TouchTrailLayer.h */,
-				A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */,
-				A2CBE52E189F31CE00D03BB0 /* CCBlade.h */,
-=======
 				9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */,
 				9CAE71DD18C60D66000F4A23 /* CCBlade.h */,
 				A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */,
 				A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */,
->>>>>>> FETCH_HEAD
 				A2CBE51D189F2EBF00D03BB0 /* PRKit */,
 			);
 			path = lib;
@@ -3331,7 +3309,6 @@
 				864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */,
 				379BB9C317F03F3700829B88 /* UILabel.cpp in Sources */,
 				866B002818C4AE73002A9017 /* GameScene.cpp in Sources */,
-				86B37B0D18D5B2C60058A868 /* TouchTrailLayer.cpp in Sources */,
 				379BB9C417F03F3700829B88 /* UILabelAtlas.cpp in Sources */,
 				A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */,
 				379BB9C517F03F3700829B88 /* UILabelBMFont.cpp in Sources */,
@@ -3360,7 +3337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI YAN (EVRKY9E9CY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3397,7 +3374,7 @@
 				);
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = sangokuCutX;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12704AE9-0884-400D-ADED-2A4ED7CFD7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3410,7 +3387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI YAN (EVRKY9E9CY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -3444,7 +3421,7 @@
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
 				PRODUCT_NAME = sangokuCutX;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12704AE9-0884-400D-ADED-2A4ED7CFD7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
