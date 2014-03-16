@@ -10,13 +10,7 @@
 #include "Number.h"
 
 
-CCSprite* NumberLabel::create(){
-    numList = CCArray::create();
-    /// Number *numlabel = [Number spriteWithFile:@"num_0.png"];
-    /// [numList addObject:numlabel];
-    // [self addChild:numlabel];
-    return super::create();
-}
+
 
 NumberLabel* NumberLabel::spriteWithFile(string name){
 
@@ -27,6 +21,10 @@ NumberLabel* NumberLabel::spriteWithFile(string name){
 
 void NumberLabel::showNum(int num){
     number = num;
+    if(numList == NULL){
+        numList = CCArray::create();
+
+    }
     //一旦 NSNumber型にキャストする
    // Number *numberValue = [[NSNumber alloc] initWithInt:num];
     

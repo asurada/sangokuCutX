@@ -22,8 +22,9 @@ using namespace BaseCharacterSpace;
 class Logic:public CCObject, public CharacterDelegate, public ItemDelegate{
     
 private:
-    CCArray *_coinBox;
+
 public:
+    CCArray *_coinBox;
     int cnt;
     CCArray *_enemyBox;
     CCLayer *_layer;

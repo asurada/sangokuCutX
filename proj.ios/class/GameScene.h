@@ -11,19 +11,20 @@
 
 #include "cocos2d.h"
 #include "Box2D.h"
-#import "CCBlade.h"
-#import "GLES-Render.h"
-#import "BaseCharacter.h"
-#import "CharacterDelegate.h"
-#import "Logic_Showup_01.h"
-#import "ItemDelegate.h"
-#import "NumberLabel.h"
+#include "CCBlade.h"
+#include "GLES-Render.h"
+#include "BaseCharacter.h"
+#include "CharacterDelegate.h"
+#include "Logic_Showup_01.h"
+#include "ItemDelegate.h"
+#include "NumberLabel.h"
+#include "CCPhysicsSprite.h"
 
 using namespace cocos2d;
 
-class GameScene : public cocos2d::CCLayer{
+class GameScene : public cocos2d::CCLayer, public ItemDelegate,public CharacterDelegate{
 public:
-    
+    typedef CCLayer super;
     CCTexture2D *spriteTexture_;	// weak ref
 	b2World *world;					// strong ref
 	GLESDebugDraw *m_debugDraw;		// strong ref
@@ -54,8 +55,33 @@ public:
     void addNewSpriteAtPosition(CCPoint point);
     static CCScene* scene();
     virtual bool init();
-    
-    CREATE_FUNC(GameScene);
+    void initHUD();
+    void hogehoge();
+    void initBackground_iphone5();
+    virtual void draw();
+    void update(float32 c);
+    void hitObject(CCTouch *touch,CCPoint *location);
+    virtual void ccTouchesBegan(CCSet *touches, CCEvent *event);
+    virtual void ccTouchesMoved(CCSet *touches, CCEvent *event);
+    virtual void ccTouchesEnded(CCSet *touches, CCEvent *event);
+    void hitFinishedAnimation(CCSprite *mHit);
+    void onBeforeCharacterDead(CCSprite *sender);
+    void onInjureGirl(CCSprite *sender);
+    void onInjureBoss(CGPoint location,CCSprite *sender,float rate);
+    void onKillBoss(CCSprite *sender);
+    void playHit(BaseCharacter *enemy);
+    void pushSpriteButton(CCSprite *sender);
+    void onGotCoint(CCSprite *sender);
+    void onCoinDisappear(CCSprite *sender);
+    void createLabel();
+    ~GameScene(){
+        delete world;
+        world = NULL;
+        delete m_debugDraw;
+        m_debugDraw = NULL;
+    }
+    //GameScene();
+    //CREATE_FUNC(GameScene);
 };
 
 #endif /* defined(__sangokuCutX__GameScene__) */

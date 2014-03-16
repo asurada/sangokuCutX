@@ -169,7 +169,6 @@
 		1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCDA8116D4A25900906EA6 /* RootViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		375BD4C31868411B0024609E /* ObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 375BD4BB1868411B0024609E /* ObjectFactory.cpp */; };
 		375BD4C41868411B0024609E /* TriggerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 375BD4BD1868411B0024609E /* TriggerBase.cpp */; };
 		375BD4C51868411B0024609E /* TriggerMng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 375BD4BF1868411B0024609E /* TriggerMng.cpp */; };
@@ -247,11 +246,11 @@
 		866B002818C4AE73002A9017 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002618C4AE73002A9017 /* GameScene.cpp */; };
 		866B002B18C4B3A3002A9017 /* EnemyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002918C4B3A3002A9017 /* EnemyData.cpp */; };
 		866B003118C4B3E2002A9017 /* CCButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 866B002F18C4B3E2002A9017 /* CCButton.cpp */; };
+		86B37B0D18D5B2C60058A868 /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */; };
 		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
 		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
 		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
 		A2CBE531189F31CE00D03BB0 /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */; };
-		A2CBE532189F31CE00D03BB0 /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */; };
 		A2CBE539189F333F00D03BB0 /* SceneStartup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */; };
 		A2CBE543189F810200D03BB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE541189F810200D03BB0 /* BaseScene.cpp */; };
 		A2CBE633189F821000D03BB0 /* bg.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2CBE545189F820F00D03BB0 /* bg.plist */; };
@@ -840,7 +839,6 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* sangokuCutX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sangokuCutX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		373B911F18788FB000198F86 /* CCComBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCComBase.h; sourceTree = "<group>"; };
 		375BD4BB1868411B0024609E /* ObjectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectFactory.cpp; sourceTree = "<group>"; };
 		375BD4BC1868411B0024609E /* ObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFactory.h; sourceTree = "<group>"; };
@@ -1010,6 +1008,8 @@
 		866B002A18C4B3A3002A9017 /* EnemyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyData.h; sourceTree = "<group>"; };
 		866B002F18C4B3E2002A9017 /* CCButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCButton.cpp; sourceTree = "<group>"; };
 		866B003018C4B3E2002A9017 /* CCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCButton.h; sourceTree = "<group>"; };
+		86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
+		86B37B0C18D5B2C60058A868 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
 		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
 		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
 		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
@@ -1018,8 +1018,6 @@
 		A2CBE523189F2EBF00D03BB0 /* triangulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangulate.h; sourceTree = "<group>"; };
 		A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlade.cpp; sourceTree = "<group>"; };
 		A2CBE52E189F31CE00D03BB0 /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
-		A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
-		A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
 		A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStartup.cpp; sourceTree = "<group>"; };
 		A2CBE538189F333F00D03BB0 /* SceneStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStartup.h; sourceTree = "<group>"; };
 		A2CBE541189F810200D03BB0 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
@@ -1277,7 +1275,6 @@
 				1ACB3244164770DE00914215 /* libcurl.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712461292920000B8313A /* libxml2.dylib in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
@@ -1923,7 +1920,6 @@
 				BF170DB412928DE900B8313A /* libz.dylib */,
 				D44C620F132DFF4E0009C878 /* AudioToolbox.framework */,
 				D44C620D132DFF430009C878 /* AVFoundation.framework */,
-				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				D44C620B132DFF330009C878 /* OpenAL.framework */,
 				BF170DB012928DE900B8313A /* OpenGLES.framework */,
@@ -2329,10 +2325,10 @@
 		A2CBE51C189F2EBF00D03BB0 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				86B37B0B18D5B2C60058A868 /* TouchTrailLayer.cpp */,
+				86B37B0C18D5B2C60058A868 /* TouchTrailLayer.h */,
 				A2CBE52D189F31CE00D03BB0 /* CCBlade.cpp */,
 				A2CBE52E189F31CE00D03BB0 /* CCBlade.h */,
-				A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */,
-				A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */,
 				A2CBE51D189F2EBF00D03BB0 /* PRKit */,
 			);
 			path = lib;
@@ -3121,7 +3117,6 @@
 				15A3D91B1682F7D5002FB0C5 /* b2ContactSolver.cpp in Sources */,
 				15A3D91C1682F7D5002FB0C5 /* b2EdgeAndCircleContact.cpp in Sources */,
 				15A3D91D1682F7D5002FB0C5 /* b2EdgeAndPolygonContact.cpp in Sources */,
-				A2CBE532189F31CE00D03BB0 /* TouchTrailLayer.cpp in Sources */,
 				15A3D91E1682F7D5002FB0C5 /* b2PolygonAndCircleContact.cpp in Sources */,
 				15A3D91F1682F7D5002FB0C5 /* b2PolygonContact.cpp in Sources */,
 				15A3D9201682F7D5002FB0C5 /* b2DistanceJoint.cpp in Sources */,
@@ -3311,6 +3306,7 @@
 				864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */,
 				379BB9C317F03F3700829B88 /* UILabel.cpp in Sources */,
 				866B002818C4AE73002A9017 /* GameScene.cpp in Sources */,
+				86B37B0D18D5B2C60058A868 /* TouchTrailLayer.cpp in Sources */,
 				379BB9C417F03F3700829B88 /* UILabelAtlas.cpp in Sources */,
 				A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */,
 				379BB9C517F03F3700829B88 /* UILabelBMFont.cpp in Sources */,

@@ -36,7 +36,6 @@ private:
     bool _hasAttack;
     void attack();
     void action();
-    void hit(float direction);
     
     void setScaleX();
 public:
@@ -56,6 +55,7 @@ public:
     std::string  _deadSound;
     std::string  _name;
     
+    void hit(float direction);
     CCAnimation *_injureAnim;
     CCAnimation  *_normalAnim;
     CCAnimation  *_deadAnim;

@@ -11,14 +11,14 @@
 #include "BaseCharacter.h"
 using namespace BaseCharacterSpace;
 
-class NumberLabel:CCSprite{
+class NumberLabel:public CCSprite{
   public:
     int number;
     CCArray* numList;
     void showNum(int num);
     typedef BaseCharacter super;
     static NumberLabel* spriteWithFile(string name);
-    virtual CCSprite* create();
+
 };
 
 #endif /* defined(__sangokuCutX__NumberLabel__) */

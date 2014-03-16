@@ -27,7 +27,7 @@
 #include "TouchTrailLayer.h"
 #include "CCBlade.h"
 
-#define kFileStreak "streak.png"
+#define kFileStreak "streak-hd.png"
 
 USING_NS_CC;
 
