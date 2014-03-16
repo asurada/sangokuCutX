@@ -55,6 +55,7 @@ public:
     void addNewSpriteAtPosition(CCPoint point);
     static CCScene* scene();
     virtual bool init();
+<<<<<<< HEAD
     void initHUD();
     void hogehoge();
     void initBackground_iphone5();
@@ -82,6 +83,10 @@ public:
     }
     //GameScene();
     //CREATE_FUNC(GameScene);
+=======
+    void initBackground_iphone5();
+    CREATE_FUNC(GameScene);
+>>>>>>> FETCH_HEAD
 };
 
 #endif /* defined(__sangokuCutX__GameScene__) */

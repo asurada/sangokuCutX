@@ -1,4 +1,4 @@
-//
+
 //  GameScene.cpp
 //  sangokuCutX
 //
@@ -33,6 +33,7 @@ bool isCutting = false;
 //const CGPoint WSSCGPointNull = {(CCFloat)NAN, (CCFloat)NAN};
 CCPoint *prePoint = NULL;
 float preDirect = 0.0;
+int tickCnt;
 
 
 
@@ -72,6 +73,7 @@ bool GameScene::init()
      logic->charDelegate = this;
         
         
+<<<<<<< HEAD
      this->initBackground_iphone5();
         
         
@@ -96,6 +98,25 @@ bool GameScene::init()
         blade->dim(true);
         
         blade->setTexture(texture);
+=======
+    this->initBackground_iphone5();
+    //  [self initBackground_iphone5];
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize()://sharedDirector] winSize];
+    _deltaRemainder = 0.0;
+    _blades = CCArray::createWithCapacity(3);
+    CCTexture2D *texture =  CCTextureCache::sharedTextureCache()->addImage("Deco_shine_v1.png");
+    //[CCTextureCache sharedTextureCache] addImage:@"Deco_shine_v1.png"];
+        
+    for (int i = 0; i < 3; i++)
+    {
+        CCBlade *blade = CCBlade::bladeWithMaximumPoint(30);
+        
+        blade->dim(true);
+        blade->setTexture(texture);
+        this->addChild(blade, 14);
+        _blades->addObject(blade);
+    }
+>>>>>>> FETCH_HEAD
         
         this->addChild(blade,14);
         _blades->addObject(blade);
@@ -103,6 +124,7 @@ bool GameScene::init()
         */
         
         // initialize the blade sparkle particle effect
+<<<<<<< HEAD
     
     _bladeSparkle = CCParticleSystemQuad::create("blade_sparkle.plist");
     
@@ -126,6 +148,34 @@ bool GameScene::init()
   
     this->scheduleUpdate();
 	
+=======
+    _bladeSparkle = CCParticleSystemQuad::create("blade_sparkle.plist");
+    _bladeSparkle->stopSystem();
+    this->addChild(_bladeSparkle,14);
+    this->initHUD();
+    this->schedule(schedule_selector(hogehoge),0.1f);
+    logic->loadEnmey();
+    this->setTouchEnabled(true);
+    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bgMusic_loop_5.caf", true)
+    this->scheduleUpdate();
+ }
+
+  this->setTouchEnabled(true);
+  return true;
+}
+
+void GameScene::dealloc()
+{
+	delete world;
+	world = NULL;
+	
+	m_debugDraw;
+	m_debugDraw = NULL;
+	
+	super->dealloc();
+}
+
+>>>>>>> FETCH_HEAD
 
     return true;
 }
@@ -136,7 +186,11 @@ bool GameScene::init()
 
 void GameScene::initPhysics(){
 	
+<<<<<<< HEAD
 	CCSize s = CCDirector::sharedDirector()->getWinSize();
+=======
+	CCSize s = CCDirector::sharedDirector()->getVisibleSize();
+>>>>>>> FETCH_HEAD
 	
 	b2Vec2 gravity;
 	gravity.Set(0.0f, -40.0f);
@@ -197,7 +251,11 @@ void GameScene::draw()
 	// This is only for debug purposes
 	// It is recommend to disable it
 	//
+<<<<<<< HEAD
 	super::draw();
+=======
+	super->draw();
+>>>>>>> FETCH_HEAD
 	
 	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
 	
@@ -226,18 +284,60 @@ void GameScene::draw()
     //    }
 }
 
-int tickCnt;
 
 
 void GameScene::hogehoge()
 {
     tickCnt++;
     tickCnt = logic->showEnemey(tickCnt,enemyCount);
+<<<<<<< HEAD
     
+=======
+>>>>>>> FETCH_HEAD
 }
 
 
 
+<<<<<<< HEAD
+=======
+void GameScene::addNewSpriteAtPosition(CCPoint p)
+{
+	CCLOG(@"Add sprite %0.2f x %02.f",p.x,p.y);
+	// Define the dynamic body.
+	//Set up a 1m squared box in the physics world
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
+	b2Body *body = world->CreateBody(&bodyDef);
+	
+	// Define another box shape for our dynamic body.
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+	
+	// Define the dynamic body fixture.
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &dynamicBox;
+	fixtureDef.density = 1.0f;
+	fixtureDef.friction = 0.3f;
+	body->CreateFixture(&fixtureDef);
+	
+    
+	CCNode *parent = this->getChildByTag(kTagParentNode);
+	
+	//We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
+	//just randomly picking one of the images
+	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
+	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
+	CCPhysicsSprite *sprite = CCPhysicsSprite::spriteWithTexture(spriteTexture_ ,CCRectMake(32 * idx,32 * idy,32,32));
+	parent->addChild(sprite);
+	
+	sprite->setPTMRatio(PTM_RATIO);
+	sprite->setB2Body(body);
+	sprite->setPosition(ccp(p.x, p.y));
+}
+
+
+>>>>>>> FETCH_HEAD
 
 
 void  GameScene::update(float32 dt)
@@ -257,15 +357,18 @@ void  GameScene::update(float32 dt)
     for(b2Body *b = world->GetBodyList(); b; b=b->GetNext()) {
         if (b->GetUserData() != NULL) {
             CCSprite *ballData = (CCSprite *)b->GetUserData();
+<<<<<<< HEAD
             ballData->setPosition(ccp(b->GetPosition().x * PTM_RATIO,
                                     b->GetPosition().y * PTM_RATIO));
             ballData->setRotation(-1 * CC_RADIANS_TO_DEGREES(b->GetAngle()));
             
+=======
+            ballData.position = ccp(b->GetPosition().x * PTM_RATIO,
+                                    b->GetPosition().y * PTM_RATIO);
+            ballData.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
+>>>>>>> FETCH_HEAD
         }
     }
-    
-    
-    
 }
 
 
@@ -277,12 +380,17 @@ void  GameScene::update(float32 dt)
  */
 void GameScene::initBackground_iphone5()
 {
+<<<<<<< HEAD
     CCSize screen = CCDirector::sharedDirector()->getWinSize();
+=======
+    CGSize screen =CCDirector::sharedDirector()->getVisibleSize();
+>>>>>>> FETCH_HEAD
     int height = 0;
     int diff = 568.0 - screen.height;
     
     CCSpriteBatchNode *spriteSheet = CCSpriteBatchNode::create("bg.png");
     this->addChild(spriteSheet);
+<<<<<<< HEAD
     // add the background image
     CCSprite *background_01 =CCSprite::create("layer_1.png");// [CCSprite spriteWithFile:@"Bg_iPhone5_01.png"];
     background_01->setPosition(ccp(screen.width/2,screen.height + diff - background_01->getContentSize().height/2));//415
@@ -303,13 +411,36 @@ void GameScene::initBackground_iphone5()
     background_04->setPosition(ccp(screen.width/2,screen.height + diff - height - background_04->getContentSize().height/2));
     this->addChild(background_04,9);
     
+=======
+    CCSprite *background_01 =CCSprite::create("layer_1.png");// [CCSprite spriteWithFile:@"Bg_iPhone5_01.png"];
+    background_01->setPosition(ccp(screen.width/2,screen.height + diff - background_01.contentSize.height/2));//415
+    this->addChild(background_01,0);
+    
+    height = background_01->getContentSize()->height;
+    CCSprite *background_02 = CCSprite::create("layer_2.png");
+    background_02->setPosition(ccp(screen.width/2,screen.height + diff - height - background_02.contentSize.height/2);
+    this->addChild(background_02,3);
+    
+    height = height + background_02->getContentSize()->height;
+    CCSprite *background_03 = CCSprite::create("layer_3.png");
+    background_03->setPosition(ccp(screen.width/2,screen.height + diff - height - background_03.contentSize.height/2);
+    this->addChild(background_03,6);
+    
+    height = height + background_03->getContentSize()->height;
+    CCSprite *background_04 = CCSprite::create("layer_4.png");
+    background_04->setPosition(ccp(screen.width/2,screen.height + diff - height - background_04.contentSize.height/2);
+    this->addChild(background_04,9);
+>>>>>>> FETCH_HEAD
 }
 
 #pragma mark - Controls
 
+
+                               
 /*
  * The touch start logic
  */
+<<<<<<< HEAD
 void GameScene::ccTouchesBegan(CCSet *touches, CCEvent *event)
 {
     CCSetIterator it = touches->begin();
@@ -325,6 +456,13 @@ void GameScene::ccTouchesBegan(CCSet *touches, CCEvent *event)
         
         CCPoint location = touch->getLocationInView();// [touch locationInView:[touch view]];
         //location = [CCDirector sharedDirector] convertToGL:location];
+=======
+bool GameScene::ccTouchBegan(CCSet *pTouches, CCEvent *pEvent)
+{
+    for (CCTouch *touch in pTouches){
+        CCPoint location = touch->locationInView(touch->view));
+        location = CCDirector::sharedDirector()->convertToGL(location);
+>>>>>>> FETCH_HEAD
         
         // move the start and end of the ray cast to the touch
         //startPoint = location;
@@ -346,12 +484,18 @@ void GameScene::ccTouchesBegan(CCSet *touches, CCEvent *event)
         }
         
         // move the sparkle to the touch
+<<<<<<< HEAD
         _bladeSparkle->setPosition(location);
         _bladeSparkle->resetSystem();
         
         this->hitObject(touch,&location);
         */
 
+=======
+        _bladeSparkle.position = location;
+        _bladeSparkle->resetSystem();
+        this->hit(touch,location);
+>>>>>>> FETCH_HEAD
     }
 
 }
@@ -361,7 +505,11 @@ void GameScene::hitFinishedAnimation(CCSprite *mHit)
 {
     
     mHit->removeFromParent();
+<<<<<<< HEAD
     mHit = nil;
+=======
+    mHit = NULL;
+>>>>>>> FETCH_HEAD
     mHit->release();
 }
 
@@ -371,6 +519,7 @@ void GameScene::hitFinishedAnimation(CCSprite *mHit)
 /*
  * The touch moved logic
  */
+<<<<<<< HEAD
 void GameScene::ccTouchesMoved(CCSet *touches, CCEvent *event)
 {
     CCSetIterator it = touches->begin();
@@ -384,6 +533,13 @@ void GameScene::ccTouchesMoved(CCSet *touches, CCEvent *event)
         // it++;
     
         CCPoint location = touch->getLocation();// [touch locationInView:[touch view]];
+=======
+void GameScene::ccTouchesMoved(CCSet touches, CCEvent event)
+{
+    for (CCTouch *touch in touches){
+        CCPoint location = touch->locationInView(touch->view);
+        location = CCDirector::sharedDirector()->convertToGL(location);
+>>>>>>> FETCH_HEAD
         /*
          // end point follows the touch
          _endPoint = location;
@@ -411,6 +567,7 @@ void GameScene::ccTouchesMoved(CCSet *touches, CCEvent *event)
         //_timePrevious = _timeCurrent;
         
         // calculate the velocity (distance / time)
+<<<<<<< HEAD
         CCPoint oldPosition = _bladeSparkle->getPosition();
         
         // sparkle follows the touch
@@ -418,6 +575,15 @@ void GameScene::ccTouchesMoved(CCSet *touches, CCEvent *event)
         
         this->hitObject(touch, &location);
     
+=======
+        CCPoint oldPosition = _bladeSparkle.position;
+        
+        // sparkle follows the touch
+        _bladeSparkle->setPosition(location);
+  
+        
+        this->hit(touch,location);
+>>>>>>> FETCH_HEAD
         
         
         
@@ -439,14 +605,23 @@ void GameScene::ccTouchesMoved(CCSet *touches, CCEvent *event)
 void GameScene::onBeforeCharacterDead(CCSprite *sender){
     enemyCount++;
     char* fn = new char;
+<<<<<<< HEAD
     sprintf(fn, "%d", enemyCount);
+=======
+    sprintf(fn, "Siheng_dead_%d.png", enemyCount);
+>>>>>>> FETCH_HEAD
     _zombiLabel->setString(fn);
     
 }
 
 void GameScene::onInjureGirl(CCSprite *sender){
+<<<<<<< HEAD
     if(bloods!= NULL && bloods->count() >0){
         CCSprite *blood = (CCSprite *)bloods->objectAtIndex(bloods->count()-1);// objectAtIndex:[bloods count]-1];
+=======
+    if(bloods!= NULL && bloods->count()>0){
+        CCSprite *blood = bloods->objectAtIndex(bloods->count-1);
+>>>>>>> FETCH_HEAD
         bloods->removeObject(blood);
         blood->removeFromParentAndCleanup(true);
         if(bloods->count() == 0){
@@ -457,10 +632,18 @@ void GameScene::onInjureGirl(CCSprite *sender){
 }
 
 
+<<<<<<< HEAD
 void GameScene::onInjureBoss(CGPoint location,CCSprite *sender,float rate){
     // _bossBlood.contentSize.width = _bossBlood.contentSize.width*rate;
     _bossBlood->setScaleX(rate);
     _bossBlood->setPosition(ccp(_bossIcon->getPosition().x + _bossBlood->getContentSize().width*rate/2 + 20,_bossIcon->getPosition().y));
+=======
+void GameScene::onInjureBoss(CCPoint location,CCSprite sender,float rate){
+    // _bossBlood.contentSize.width = _bossBlood.contentSize.width*rate;
+    _bossBlood->setScaleX(rate);
+    _bossBlood->setPosition(
+                            ccp(_bossIcon->getPosition()->x + _bossBlood->getContentSize()->width*rate/2 + 20,_bossIcon->getPosition()->y));
+>>>>>>> FETCH_HEAD
     
 }
 
@@ -471,7 +654,11 @@ void GameScene::onKillBoss(CCSprite *sender){
 }
 
 
+<<<<<<< HEAD
 void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
+=======
+void GameScene::hit(CCTouch *touch ,CCPoint location){
+>>>>>>> FETCH_HEAD
     float direction = 0;
     if(prePoint == NULL){
         prePoint = location;
@@ -480,13 +667,18 @@ void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
         prePoint = location;
     }
     
+<<<<<<< HEAD
     CCObject * object;
     CCARRAY_FOREACH(logic->_enemyBox, object){
         BaseCharacter *enemy = (BaseCharacter*)object;
+=======
+    for (BaseCharacter *enemy in logic.enemyBox) {
+>>>>>>> FETCH_HEAD
         if(enemy == NULL){
             continue;
         }
         CCPoint touchLocation = this->convertTouchToNodeSpace(touch);
+<<<<<<< HEAD
         particularSpriteRect = new CCRect(enemy->getPosition().x-27, enemy->getPosition().y-50, 54,80);
         halfParticularSpriteRect = new CCRect(enemy->getPosition().x-27, enemy->getPosition().y-50, 27,80);
         // original = CGRectMake(enemy.position.x-27, enemy.position.y-50, 0,0);
@@ -498,21 +690,47 @@ void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
                enemy->getState() != _standby &&
                enemy->getState() != _movingup &&
                enemy->getState() != _movingdown &&!isCutting){
+=======
+        particularSpriteRect = CCRectMake(enemy.position.x-27, enemy.position.y-50, 54,80);
+        halfParticularSpriteRect = CCRectMake(enemy.position.x-27, enemy.position.y-50, 27,80);
+        // original = CGRectMake(enemy.position.x-27, enemy.position.y-50, 0,0);
+        if (CGRectContainsPoint(particularSpriteRect, touchLocation)) {
+            if(enemy!= NULL &&
+               ![enemy isEqual:[NSNull null]]&&
+               enemy->_hp>0 &&
+               enemy->getState() != dead &&
+               enemy->getState() != standby &&
+               enemy->getState() != movingup &&
+               enemy->getState() != movingdown &&!isCutting){
+>>>>>>> FETCH_HEAD
                 isCutting = true;
                 if(direction != 0){
                     enemy->hit(direction);
                     if(preDirect == 0.0){
+<<<<<<< HEAD
                         this->playHit(enemy);
+=======
+                       this->playHit(enemy);
+>>>>>>> FETCH_HEAD
                     }else if(((float)preDirect * direction)<0){
                         this->playHit(enemy);
                     }
                 }else{
+<<<<<<< HEAD
                     if(halfParticularSpriteRect->containsPoint(touchLocation)){
                         enemy->hit(1);
                     }else{
                         enemy->hit(-1);
                     }
                     this->playHit(enemy);
+=======
+                    if(CGRectContainsPoint(halfParticularSpriteRect, touchLocation)){
+                        enemy->hit(1);
+                    }else{
+                         enemy->hit(-1);
+                    }
+                   this->playHit(enemy);
+>>>>>>> FETCH_HEAD
                 }
                 preDirect = direction;
             }else{
@@ -525,6 +743,7 @@ void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
     
     
     //NSLog(@"coinBox count: %d",logic.coinBox.count);
+<<<<<<< HEAD
     for (int index=0; index<logic->_coinBox->count(); index++) {
         Coin *coin = (Coin *)logic->_coinBox->objectAtIndex(index);
         coin->charDelegate = this;
@@ -532,6 +751,15 @@ void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
         CCRect *particularSpriteRect = new CCRect(coin->getPosition().x, coin->getPosition().y, coin->getContentSize().width,coin->getContentSize().height);
         if (particularSpriteRect->containsPoint(touchLocation)) {
             coin->gotoCoin(ccp(26,510));
+=======
+    for (int index=0; index<logic.coinBox.count; index++) {
+        Coin *coin = logic.coinBox->objectAtIndex:index];
+        coin.charDelegate = self;
+        CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
+        CGRect particularSpriteRect = CGRectMake(coin.position.x, coin.position.y, coin.contentSize.width,coin.contentSize.height);
+        if (CGRectContainsPoint(particularSpriteRect, touchLocation)) {
+            [coin gotoCoin: ccp(26,510)];
+>>>>>>> FETCH_HEAD
             //[_coinLabel setString:[NSString stringWithFormat:@"%d",coinCount]];
             return;
         }
@@ -539,6 +767,7 @@ void GameScene::hitObject(CCTouch *touch ,CCPoint *location){
 }
 
 void GameScene::playHit(BaseCharacter *enemy){
+<<<<<<< HEAD
     hit = CCSprite::create("hit_normal.png");
     hit->setPosition(enemy->getPosition());//ccp(enemy.position.x,enemy.position.y);
     this->addChild(hit,15);
@@ -547,16 +776,34 @@ void GameScene::playHit(BaseCharacter *enemy){
     
     char* fn = new char;
     for (int i=0; i<=4; i++) {
+=======
+    hit = CCSprite->spriteWithFile("hit_normal.png");
+    hit.position = enemy.position;//ccp(enemy.position.x,enemy.position.y);
+    this->addChild(hit,15);
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("hit.plist");
+    CCArray *hitAnimFrames = CCArray::create();
+    for (int i=0; i<=4; i++) {
+        char* fn = new char;
+>>>>>>> FETCH_HEAD
         sprintf(fn, "sheet_256x256_%d.png", i);
         hitAnimFrames->addObject(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(fn));
     }
     
+<<<<<<< HEAD
     hitAnim = CCAnimation::create(hitAnimFrames, 0.07f);
     CCAnimate *hitAnimation = CCAnimate::create(hitAnim);
     CCRepeat *repeat = CCRepeat::create(hitAnimation,1);
     CCCallFuncO *callback = CCCallFuncO::create(hit, callfuncO_selector(CCNode::removeFromParentAndCleanup),CCNode::getParent());
     CCSequence *sequence = CCSequence::create(repeat,callback);
     hit->runAction(sequence);
+=======
+    hitAnim = CCAnimation::create(hitAnimFrames,0.07f);
+    CCAnimate hitAnimation = CCAnimate::create(hitAnim);
+    CCRepeat repeat = CCRepeat::create(hitAnimation,1);
+    CCCallFuncO callback = [CCCallFuncO actionWithTarget:hit selector:@selector(removeFromParentAndCleanup:) object:[CCNode node]];
+    CCSequence sequence = [CCSequence actions:repeat, callback,nil];
+    [hit runAction:sequence];
+>>>>>>> FETCH_HEAD
 }
 
 
@@ -572,9 +819,14 @@ void GameScene::ccTouchesEnded(CCSet *touches,CCEvent *event)
     CCPoint pt;
     
 	//Add a new body/atlas sprite at the touched location
+<<<<<<< HEAD
     for( int iTouchCount = 0; iTouchCount < touches->count(); iTouchCount++ ){
         touch = (CCTouch*)(*it);
     	CCPoint location = touch->getLocation();
+=======
+	for(CCTouch *touch in touches ) {
+		CCPoint location = [touch locationInView: [touch view]];
+>>>>>>> FETCH_HEAD
         
         // remove all entry and exit points from all polygons
         // [self clearSlices];
@@ -667,7 +919,11 @@ void GameScene::initHUD()
 }
 
 
+<<<<<<< HEAD
 void GameScene::pushSpriteButton(CCSprite *sender)
+=======
+void GameScene::pushSpriteButton(CCObject sender)
+>>>>>>> FETCH_HEAD
 {
     switch(sender->getTag()){
         case 11:
@@ -686,7 +942,11 @@ void GameScene::pushSpriteButton(CCSprite *sender)
 }
 
 
+<<<<<<< HEAD
 void GameScene::onGotCoint(CCSprite *sender){
+=======
+void GameScene::onGotCoint(CCSprite sender){
+>>>>>>> FETCH_HEAD
     coinCount++;
     number->showNum(coinCount);
     CCEaseInOut *scaleUpAction =  CCEaseInOut::create(CCScaleTo::create(0.2, 1.4,1.4), 2.0f);
@@ -734,7 +994,15 @@ void GameScene::createLabel()
 	
 }
 
+<<<<<<< HEAD
 /*
+=======
+bool WSSCGPointIsNull(CGPoint point ){
+    return std::isnan(point.x) && std::isnan(point.y);
+}
+
+
+>>>>>>> FETCH_HEAD
 #pragma mark GameKit delegate
 
 -(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
