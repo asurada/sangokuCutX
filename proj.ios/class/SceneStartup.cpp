@@ -7,6 +7,7 @@
 //
 
 #include "SceneStartup.h"
+#include "GameScene.h"
 
 USING_NS_CC;
 
@@ -203,9 +204,12 @@ void SceneStartup::pushSpriteButton(CCObject* pSender)
 {
     CCNode *node = (CCNode*)pSender;
     switch(node->getTag()){
-        case 11:
-            CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.0f,SceneStartup::scene()));
+        case 11:{
+            CCScene *gameScene = GameScene::scene();
+            CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.0f,gameScene));
+            gameScene->init();
             break;
+        }
         case 22:
             CCLOG("spriteButtonUseBlock_pushed");
             break;

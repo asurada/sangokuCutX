@@ -22,9 +22,16 @@
 
 using namespace cocos2d;
 
-class GameScene : public cocos2d::CCLayer, public ItemDelegate,public CharacterDelegate{
+class GameScene : public cocos2d::CCLayer, public ItemDelegate, public CharacterDelegate{
 public:
     typedef CCLayer super;
+    virtual ~GameScene();
+    virtual bool init();
+    static cocos2d::CCScene* scene();
+    
+    
+    
+    CREATE_FUNC(GameScene);
     CCTexture2D *spriteTexture_;	// weak ref
 	b2World *world;					// strong ref
 	GLESDebugDraw *m_debugDraw;		// strong ref
@@ -53,8 +60,8 @@ public:
     int enemyCount;
     void initPhysics();
     void addNewSpriteAtPosition(CCPoint point);
-    static CCScene* scene();
-    virtual bool init();
+   
+    
     void initHUD();
     void hogehoge();
     void initBackground_iphone5();
@@ -65,23 +72,28 @@ public:
     virtual void ccTouchesMoved(CCSet *touches, CCEvent *event);
     virtual void ccTouchesEnded(CCSet *touches, CCEvent *event);
     void hitFinishedAnimation(CCSprite *mHit);
-    void onBeforeCharacterDead(CCSprite *sender);
-    void onInjureGirl(CCSprite *sender);
-    void onInjureBoss(CGPoint location,CCSprite *sender,float rate);
-    void onKillBoss(CCSprite *sender);
+   
     void playHit(BaseCharacter *enemy);
     void pushSpriteButton(CCSprite *sender);
-    void onGotCoint(CCSprite *sender);
-    void onCoinDisappear(CCSprite *sender);
+    
+    virtual void onBeforeCharacterDead(CCSprite *sender);
+    virtual void onInjureGirl(CCSprite *sender);
+    virtual void onKillBoss(CCSprite *sender);
+    virtual void onCharacterDead(CCPoint location,CCSprite* sender);
+    virtual void onInjureBoss(CCPoint location,CCSprite* sender,float rate);
+    virtual void onGotCoint(CCSprite *sender);
+    virtual void onCoinDisapper(CCSprite *sender);
+    virtual void onCoinGot(CCSprite *sender);
+    virtual void onCoinDisappear(CCSprite *sender);
     void createLabel();
-    ~GameScene(){
-        delete world;
-        world = NULL;
-        delete m_debugDraw;
-        m_debugDraw = NULL;
-    }
+//    ~GameScene(){
+//        delete world;
+//        world = NULL;
+//        delete m_debugDraw;
+//        m_debugDraw = NULL;
+//    }
     //GameScene();
-    //CREATE_FUNC(GameScene);
+    
 
 };
 

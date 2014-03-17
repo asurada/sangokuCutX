@@ -35,7 +35,13 @@ CCPoint *prePoint = NULL;
 float preDirect = 0.0;
 int tickCnt;
 
+GameScene:: ~GameScene(){
+   delete world;
+   world = NULL;
+   delete m_debugDraw;
+   m_debugDraw = NULL;
 
+}
 
 
 CCScene* GameScene::scene()
@@ -45,11 +51,13 @@ CCScene* GameScene::scene()
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    GameScene *layer = (GameScene *)GameScene::create();
+    GameScene *layer = GameScene::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
     
+    //TouchTrailLayer *TrailLayer = TouchTrailLayer::create();
+    //scene->addChild(TrailLayer);
     // return the scene
     return scene;
     
@@ -57,7 +65,7 @@ CCScene* GameScene::scene()
     
 bool GameScene::init()
 {
-    if ( !CCLayer::init() )
+    if (!CCLayer::init() )
     {
         return false;
     }
@@ -85,8 +93,7 @@ bool GameScene::init()
      _blades = CCArray::createWithCapacity(3);
      CCTexture2D *texture = CCTextureCache::sharedTextureCache()->addImage("Deco_shine_v1.png");
     
-    TouchTrailLayer *layer = TouchTrailLayer::create();
-    addChild(layer);
+   
     
     /*
     for (int i = 0; i < 3; i++)
@@ -106,6 +113,7 @@ bool GameScene::init()
         // initialize the blade sparkle particle effect
 
     
+ 
     _bladeSparkle = CCParticleSystemQuad::create("blade_sparkle.plist");
     
     _bladeSparkle->stopSystem();
@@ -128,7 +136,9 @@ bool GameScene::init()
   
     this->scheduleUpdate();
 	
-
+    TouchTrailLayer *layer = TouchTrailLayer::create();
+    addChild(layer);
+    
     return true;
 }
 
@@ -467,7 +477,7 @@ void GameScene::onInjureGirl(CCSprite *sender){
 
 
 
-void GameScene::onInjureBoss(CGPoint location,CCSprite *sender,float rate){
+void GameScene::onInjureBoss(CCPoint location,CCSprite *sender,float rate){
     // _bossBlood.contentSize.width = _bossBlood.contentSize.width*rate;
     _bossBlood->setScaleX(rate);
     _bossBlood->setPosition(ccp(_bossIcon->getPosition().x + _bossBlood->getContentSize().width*rate/2 + 20,_bossIcon->getPosition().y));
@@ -727,6 +737,25 @@ void GameScene::onCoinDisappear(CCSprite *sender){
     
     
 }
+
+
+
+
+
+void GameScene::onCharacterDead(CCPoint location,CCSprite* sender){
+    
+}
+
+
+void GameScene::onCoinDisapper(CCSprite *sender){
+    
+}
+void GameScene::onCoinGot(CCSprite *sender){
+    
+}
+
+
+
 
 void GameScene::createLabel()
 {
