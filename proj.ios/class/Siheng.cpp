@@ -13,8 +13,8 @@ using namespace BaseCharacterSpace;
 using BaseCharacterSpace::state;
 using cocos2d::CCSprite;
 
-BaseCharacter *Siheng::spriteWithFile(){
-    return (BaseCharacter *)super::createWithSpriteFrameName("Siheng_normal_1.png");
+Siheng *Siheng::spriteWithFile(){
+    return (Siheng *)super::createWithSpriteFrameName("Siheng_normal_1.png");
 }
 
 

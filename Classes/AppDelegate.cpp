@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "SceneStartup.h"
+#include "GameScene.h"
+#include "ResourceLoad.h"
 
 USING_NS_CC;
 
@@ -25,9 +27,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
+    ResourceLoad::loadResource();
     // create a scene. it's an autorelease object
     CCScene *pScene = SceneStartup::scene();
 
+    //pScene->init();
     // run
     pDirector->runWithScene(pScene);
 

@@ -36,18 +36,23 @@ public:
     BaseCharacter* getEnemy();
     Logic* iniLogic(Logic *logic);
     int showEnemey(int tickCnt,int killedCnt);
-    void loadEnmey();
+    
     BaseCharacter *createEnemy(int index);
     BaseCharacter *createBoss(BaseCharacter *boss,int index);
     void setSpritePositon(BaseCharacter *boss,int index);
     void showBoss();
-    virtual void onCharacterDead(CCPoint location,CCSprite *sender);
-    void onBeforeCharacterDead(CCSprite *sender);
-    void onInjureGirl(CCSprite *sender);
-    void onKillBoss(CCSprite *sender);
-    void onInjureBoss(CCPoint location ,CCSprite *sender ,float rate);
-    void onCoinDisappear(CCSprite *sender);
     int showEnemey(int tickCnt);
+   
+    void  loadEnmey();
+    void  onCharacterDead(CCPoint location,CCSprite* sender);
+    void  onBeforeCharacterDead(CCSprite * sender);
+    void  onInjureGirl(CCSprite * sender);
+    void  onInjureBoss(CCPoint location,CCSprite* sender,float rate);
+    void  onKillBoss(CCSprite *sender);
+    void  onGotCoint(CCSprite *sender);
+    void  onCoinDisapper(CCSprite *sender);
+    void  onCoinGot(CCSprite *sender);
+    void  onCoinDisappear(CCSprite *sender);
 };
 
 

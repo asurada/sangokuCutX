@@ -9,18 +9,17 @@
 #ifndef __sangokuCutX__Number__
 #define __sangokuCutX__Number__
 #include "BaseCharacter.h"
-using namespace BaseCharacterSpace;
+
 
 class Number : public CCSprite{
   public :
     int curcount;
     int dstCount;
-    bool initSprite();
     bool showNum(int num);
     bool showNumAnimation(int num);
-    typedef BaseCharacter super;
-    static Number* spriteWithFile(string name);
+    typedef CCSprite super;
     bool showNextNum();
+    bool initSprite();
 
 };
 

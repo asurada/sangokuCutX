@@ -17,8 +17,8 @@ class Siheng: protected BaseCharacter{
     
 public:
     typedef BaseCharacter super;
-    static BaseCharacter* spriteWithFile();
-    bool initSprite();
+    static Siheng* spriteWithFile();
+    virtual bool initSprite();
     virtual void loadInjureAnim();
     virtual void loadAttackAnim();
     virtual void loadDeadAnim();

@@ -39,11 +39,12 @@ class Logic_Showup_01 : public Logic{
     int posDiff = 0;
     int sequence = 0;
 public:
-    Logic_Showup_01(void);
+    Logic_Showup_01();
     int getPosition();
     int showEnemey(int tickCnt,int killedCnt);
+    void showEnemey();
     void showBoss();
-    void virtual loadEnmey();
+    void loadEnmey();
     void bossAppear(int killedcnt);
     
 

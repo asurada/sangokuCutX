@@ -15,7 +15,7 @@ void ResourceLoad::loadResource(){
     CCTextureCache::sharedTextureCache()->addImage("coin.png");
     
     //[[CCTextureCache sharedTextureCache]addImage:@"sheet_64x64_0006.png"];
-    CCTextureCache::sharedTextureCache()->addImage("num.png");
+    CCTextureCache::sharedTextureCache()->addImage("numpic.png");
     CCTextureCache::sharedTextureCache()->addImage("getCoin.png");
     CCTextureCache::sharedTextureCache()->addImage("zhangfei_normal.png");
     CCTextureCache::sharedTextureCache()->addImage("zhangfei_injure.png");
@@ -103,8 +103,8 @@ void ResourceLoad::loadResource(){
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Sihei_dead.plist",texture2D);
     texture2D = cache->textureForKey("getCoin.png");
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("getCoin.plist",texture2D);
-    texture2D = cache->textureForKey("num.png");
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("num.plist" ,texture2D);
+    texture2D = cache->textureForKey("numpic.png");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("numpic.plist" ,texture2D);
     //  texture2D = [cache textureForKey:@"sheet_64x64_0006.png"];
     
     

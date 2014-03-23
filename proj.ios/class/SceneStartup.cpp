@@ -38,7 +38,6 @@ bool SceneStartup::init()
     }
     
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
     
     
@@ -113,7 +112,7 @@ void SceneStartup::iniHUD(){
     menu->setPosition(ccp(screen.width/2 - 50, screen.height/2 + 130));
     this->addChild(menu);
 
-    
+ /*
     CCMenuItem *v2 = CCMenuItemImage::create("Icon_battle_nameBg.png","Icon_battle_nameBg.png",this,menu_selector(SceneStartup::pushSpriteButton));
 
     v2->setTag(11);
@@ -175,7 +174,7 @@ void SceneStartup::iniHUD(){
     menu8->alignItemsHorizontallyWithPadding(20);
     menu8->setPosition(ccp(screen.width/2 + 70 , screen.height/2 - 140));
     this->addChild(menu8);
-    
+   */ 
 }
 
 void SceneStartup::initBackground_iphone5()
@@ -207,7 +206,7 @@ void SceneStartup::pushSpriteButton(CCObject* pSender)
         case 11:{
             CCScene *gameScene = GameScene::scene();
             CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.0f,gameScene));
-            gameScene->init();
+            //
             break;
         }
         case 22:

@@ -379,19 +379,18 @@
 		9C89E6E418D7441A0085726B /* sheet_64x64_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60518D7441A0085726B /* sheet_64x64_7.png */; };
 		9C89E6E518D7441A0085726B /* sheet_64x64_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60618D7441A0085726B /* sheet_64x64_8.png */; };
 		9C89E6E618D7441A0085726B /* sheet_64x64_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60718D7441A0085726B /* sheet_64x64_9.png */; };
-		9C89E6E718D7441A0085726B /* banana_splurt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60918D7441A0085726B /* banana_splurt.plist */; };
-		9C89E6E818D7441A0085726B /* blade_sparkle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60A18D7441A0085726B /* blade_sparkle.plist */; };
-		9C89E6E918D7441A0085726B /* explosion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60B18D7441A0085726B /* explosion.plist */; };
-		9C89E6EA18D7441A0085726B /* grapes_splurt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60C18D7441A0085726B /* grapes_splurt.plist */; };
-		9C89E6EB18D7441A0085726B /* pineapple_splurt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60D18D7441A0085726B /* pineapple_splurt.plist */; };
-		9C89E6EC18D7441A0085726B /* strawberry_splurt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60E18D7441A0085726B /* strawberry_splurt.plist */; };
-		9C89E6ED18D7441A0085726B /* sun_pollen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E60F18D7441A0085726B /* sun_pollen.plist */; };
-		9C89E6EE18D7441A0085726B /* watermelon_splurt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C89E61018D7441A0085726B /* watermelon_splurt.plist */; };
 		9CAB83CE18D5C8E900F20A15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB83CD18D5C8E900F20A15 /* CoreGraphics.framework */; };
-		9CAE71DE18C60D66000F4A23 /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */; };
-		A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */; };
-		A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */; };
-		A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */; };
+		9CE315A718D9D3A100FA929C /* CCBlade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3159C18D9D3A100FA929C /* CCBlade.cpp */; };
+		9CE315A818D9D3A100FA929C /* PRFilledPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3159F18D9D3A100FA929C /* PRFilledPolygon.cpp */; };
+		9CE315A918D9D3A100FA929C /* PRRatcliffTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE315A118D9D3A100FA929C /* PRRatcliffTriangulator.cpp */; };
+		9CE315AA18D9D3A100FA929C /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE315A318D9D3A100FA929C /* triangulate.cpp */; };
+		9CE315AB18D9D3A100FA929C /* TouchTrailLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE315A518D9D3A100FA929C /* TouchTrailLayer.cpp */; };
+		9CE315B218DEA5F100FA929C /* layer_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE315AE18DEA5F100FA929C /* layer_1.png */; };
+		9CE315B318DEA5F100FA929C /* layer_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE315AF18DEA5F100FA929C /* layer_2.png */; };
+		9CE315B418DEA5F100FA929C /* layer_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE315B018DEA5F100FA929C /* layer_3.png */; };
+		9CE315B518DEA5F100FA929C /* layer_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE315B118DEA5F100FA929C /* layer_4.png */; };
+		9CE315CB18DEE0E900FA929C /* blade_sparkle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CE315CA18DEE0E900FA929C /* blade_sparkle.plist */; };
+		9CE315CE18DF18BC00FA929C /* NullChar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CE315CC18DF18BC00FA929C /* NullChar.cpp */; };
 		A2CBE539189F333F00D03BB0 /* SceneStartup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */; };
 		A2CBE543189F810200D03BB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE541189F810200D03BB0 /* BaseScene.cpp */; };
 		A2CBE713189F823100D03BB0 /* SceneOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2CBE711189F823100D03BB0 /* SceneOption.cpp */; };
@@ -1060,25 +1059,24 @@
 		9C89E60518D7441A0085726B /* sheet_64x64_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheet_64x64_7.png; sourceTree = "<group>"; };
 		9C89E60618D7441A0085726B /* sheet_64x64_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheet_64x64_8.png; sourceTree = "<group>"; };
 		9C89E60718D7441A0085726B /* sheet_64x64_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheet_64x64_9.png; sourceTree = "<group>"; };
-		9C89E60918D7441A0085726B /* banana_splurt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = banana_splurt.plist; sourceTree = "<group>"; };
-		9C89E60A18D7441A0085726B /* blade_sparkle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = blade_sparkle.plist; sourceTree = "<group>"; };
-		9C89E60B18D7441A0085726B /* explosion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = explosion.plist; sourceTree = "<group>"; };
-		9C89E60C18D7441A0085726B /* grapes_splurt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = grapes_splurt.plist; sourceTree = "<group>"; };
-		9C89E60D18D7441A0085726B /* pineapple_splurt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pineapple_splurt.plist; sourceTree = "<group>"; };
-		9C89E60E18D7441A0085726B /* strawberry_splurt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = strawberry_splurt.plist; sourceTree = "<group>"; };
-		9C89E60F18D7441A0085726B /* sun_pollen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sun_pollen.plist; sourceTree = "<group>"; };
-		9C89E61018D7441A0085726B /* watermelon_splurt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = watermelon_splurt.plist; sourceTree = "<group>"; };
 		9CAB83CD18D5C8E900F20A15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlade.cpp; sourceTree = "<group>"; };
-		9CAE71DD18C60D66000F4A23 /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
-		A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
-		A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
-		A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
-		A2CBE521189F2EBF00D03BB0 /* PRRatcliffTriangulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRatcliffTriangulator.h; sourceTree = "<group>"; };
-		A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangulate.cpp; sourceTree = "<group>"; };
-		A2CBE523189F2EBF00D03BB0 /* triangulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangulate.h; sourceTree = "<group>"; };
-		A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
-		A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
+		9CE3159C18D9D3A100FA929C /* CCBlade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlade.cpp; sourceTree = "<group>"; };
+		9CE3159D18D9D3A100FA929C /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
+		9CE3159F18D9D3A100FA929C /* PRFilledPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRFilledPolygon.cpp; sourceTree = "<group>"; };
+		9CE315A018D9D3A100FA929C /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
+		9CE315A118D9D3A100FA929C /* PRRatcliffTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRRatcliffTriangulator.cpp; sourceTree = "<group>"; };
+		9CE315A218D9D3A100FA929C /* PRRatcliffTriangulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRatcliffTriangulator.h; sourceTree = "<group>"; };
+		9CE315A318D9D3A100FA929C /* triangulate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangulate.cpp; sourceTree = "<group>"; };
+		9CE315A418D9D3A100FA929C /* triangulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangulate.h; sourceTree = "<group>"; };
+		9CE315A518D9D3A100FA929C /* TouchTrailLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchTrailLayer.cpp; sourceTree = "<group>"; };
+		9CE315A618D9D3A100FA929C /* TouchTrailLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrailLayer.h; sourceTree = "<group>"; };
+		9CE315AE18DEA5F100FA929C /* layer_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer_1.png; sourceTree = "<group>"; };
+		9CE315AF18DEA5F100FA929C /* layer_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer_2.png; sourceTree = "<group>"; };
+		9CE315B018DEA5F100FA929C /* layer_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer_3.png; sourceTree = "<group>"; };
+		9CE315B118DEA5F100FA929C /* layer_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer_4.png; sourceTree = "<group>"; };
+		9CE315CA18DEE0E900FA929C /* blade_sparkle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = blade_sparkle.plist; sourceTree = "<group>"; };
+		9CE315CC18DF18BC00FA929C /* NullChar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullChar.cpp; sourceTree = "<group>"; };
+		9CE315CD18DF18BC00FA929C /* NullChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullChar.h; sourceTree = "<group>"; };
 		A2CBE537189F333F00D03BB0 /* SceneStartup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStartup.cpp; sourceTree = "<group>"; };
 		A2CBE538189F333F00D03BB0 /* SceneStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStartup.h; sourceTree = "<group>"; };
 		A2CBE541189F810200D03BB0 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
@@ -1734,7 +1732,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A2CBE51C189F2EBF00D03BB0 /* lib */,
 				A2CBE503189F2BC600D03BB0 /* class */,
 				15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */,
 				15A3D8871682F7D5002FB0C5 /* Box2D */,
@@ -2226,6 +2223,7 @@
 		9C89E56E18D7441A0085726B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9CE315AD18DEA5F100FA929C /* iPhone5 */,
 				9C89E56F18D7441A0085726B /* Background */,
 				9C89E57218D7441A0085726B /* Btn_back.png */,
 				9C89E57318D7441A0085726B /* Btn_battleStart.png */,
@@ -2340,21 +2338,52 @@
 		9C89E60818D7441A0085726B /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				9C89E60918D7441A0085726B /* banana_splurt.plist */,
-				9C89E60A18D7441A0085726B /* blade_sparkle.plist */,
-				9C89E60B18D7441A0085726B /* explosion.plist */,
-				9C89E60C18D7441A0085726B /* grapes_splurt.plist */,
-				9C89E60D18D7441A0085726B /* pineapple_splurt.plist */,
-				9C89E60E18D7441A0085726B /* strawberry_splurt.plist */,
-				9C89E60F18D7441A0085726B /* sun_pollen.plist */,
-				9C89E61018D7441A0085726B /* watermelon_splurt.plist */,
+				9CE315CA18DEE0E900FA929C /* blade_sparkle.plist */,
 			);
 			path = Particles;
+			sourceTree = "<group>";
+		};
+		9CE3159B18D9D3A100FA929C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3159C18D9D3A100FA929C /* CCBlade.cpp */,
+				9CE3159D18D9D3A100FA929C /* CCBlade.h */,
+				9CE3159E18D9D3A100FA929C /* PRKit */,
+				9CE315A518D9D3A100FA929C /* TouchTrailLayer.cpp */,
+				9CE315A618D9D3A100FA929C /* TouchTrailLayer.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		9CE3159E18D9D3A100FA929C /* PRKit */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3159F18D9D3A100FA929C /* PRFilledPolygon.cpp */,
+				9CE315A018D9D3A100FA929C /* PRFilledPolygon.h */,
+				9CE315A118D9D3A100FA929C /* PRRatcliffTriangulator.cpp */,
+				9CE315A218D9D3A100FA929C /* PRRatcliffTriangulator.h */,
+				9CE315A318D9D3A100FA929C /* triangulate.cpp */,
+				9CE315A418D9D3A100FA929C /* triangulate.h */,
+			);
+			path = PRKit;
+			sourceTree = "<group>";
+		};
+		9CE315AD18DEA5F100FA929C /* iPhone5 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE315AE18DEA5F100FA929C /* layer_1.png */,
+				9CE315AF18DEA5F100FA929C /* layer_2.png */,
+				9CE315B018DEA5F100FA929C /* layer_3.png */,
+				9CE315B118DEA5F100FA929C /* layer_4.png */,
+			);
+			name = iPhone5;
+			path = ../iPhone5;
 			sourceTree = "<group>";
 		};
 		A2CBE503189F2BC600D03BB0 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				9CE3159B18D9D3A100FA929C /* lib */,
 				864170A818B0E0E2001CE902 /* GLES-Render.h */,
 				864170A618B0E0D2001CE902 /* GLES-Render.cpp */,
 				8641709918B07F33001CE902 /* item */,
@@ -2370,31 +2399,6 @@
 				866B003018C4B3E2002A9017 /* CCButton.h */,
 			);
 			path = class;
-			sourceTree = "<group>";
-		};
-		A2CBE51C189F2EBF00D03BB0 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				9CAE71DC18C60D66000F4A23 /* CCBlade.cpp */,
-				9CAE71DD18C60D66000F4A23 /* CCBlade.h */,
-				A2CBE52F189F31CE00D03BB0 /* TouchTrailLayer.cpp */,
-				A2CBE530189F31CE00D03BB0 /* TouchTrailLayer.h */,
-				A2CBE51D189F2EBF00D03BB0 /* PRKit */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		A2CBE51D189F2EBF00D03BB0 /* PRKit */ = {
-			isa = PBXGroup;
-			children = (
-				A2CBE51E189F2EBF00D03BB0 /* PRFilledPolygon.cpp */,
-				A2CBE51F189F2EBF00D03BB0 /* PRFilledPolygon.h */,
-				A2CBE520189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp */,
-				A2CBE521189F2EBF00D03BB0 /* PRRatcliffTriangulator.h */,
-				A2CBE522189F2EBF00D03BB0 /* triangulate.cpp */,
-				A2CBE523189F2EBF00D03BB0 /* triangulate.h */,
-			);
-			path = PRKit;
 			sourceTree = "<group>";
 		};
 		A2CBE533189F320200D03BB0 /* scene */ = {
@@ -2446,6 +2450,8 @@
 				8641709318AA510B001CE902 /* Sibao.cpp */,
 				8641709718AA512E001CE902 /* Sihei.h */,
 				8641709618AA512E001CE902 /* Sihei.cpp */,
+				9CE315CC18DF18BC00FA929C /* NullChar.cpp */,
+				9CE315CD18DF18BC00FA929C /* NullChar.h */,
 			);
 			name = enemey;
 			sourceTree = "<group>";
@@ -2533,10 +2539,9 @@
 			files = (
 				9C89E6C318D7441A0085726B /* num_7.png in Resources */,
 				9C89E6BB18D7441A0085726B /* Loading_bloodBg.png in Resources */,
-				9C89E6E918D7441A0085726B /* explosion.plist in Resources */,
 				9C89E6E018D7441A0085726B /* sheet_64x64_3.png in Resources */,
 				9C89E63F18D7441A0085726B /* Siheng_dead.plist in Resources */,
-				9C89E6E818D7441A0085726B /* blade_sparkle.plist in Resources */,
+				9CE315B418DEA5F100FA929C /* layer_3.png in Resources */,
 				9C89E6DB18D7441A0085726B /* sheet_64x64_12.png in Resources */,
 				9C89E6BD18D7441A0085726B /* num_1.png in Resources */,
 				9C89E6E418D7441A0085726B /* sheet_64x64_7.png in Resources */,
@@ -2557,7 +2562,6 @@
 				9C89E63A18D7441A0085726B /* Siha_normal.png in Resources */,
 				9C89E65518D7441A0085726B /* fingerHit_3.caf in Resources */,
 				9C89E6C418D7441A0085726B /* num_8.png in Resources */,
-				9C89E6EE18D7441A0085726B /* watermelon_splurt.plist in Resources */,
 				9C89E62118D7441A0085726B /* hit.plist in Resources */,
 				9C89E6B318D7441A0085726B /* sheet_256x256_0.png in Resources */,
 				9C89E65718D7441A0085726B /* fingerHit_5.caf in Resources */,
@@ -2570,15 +2574,12 @@
 				9C89E6CC18D7441A0085726B /* sheet_64x64_2.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
 				9C89E61F18D7441A0085726B /* Girl_normal.plist in Resources */,
-				9C89E6EA18D7441A0085726B /* grapes_splurt.plist in Resources */,
-				9C89E6E718D7441A0085726B /* banana_splurt.plist in Resources */,
 				9C89E65118D7441A0085726B /* bgMusic_loop_3.caf in Resources */,
 				9C89E62918D7441A0085726B /* HuangjinSihei_normal.plist in Resources */,
 				9C89E6BA18D7441A0085726B /* Loading_blood.png in Resources */,
 				9C89E61118D7441A0085726B /* bg.plist in Resources */,
 				9C89E62B18D7441A0085726B /* HuangjinSiheng_dead.plist in Resources */,
 				9C89E63418D7441A0085726B /* Sibao_injured.png in Resources */,
-				9C89E6ED18D7441A0085726B /* sun_pollen.plist in Resources */,
 				9C89E6BE18D7441A0085726B /* num_2.png in Resources */,
 				9C89E65218D7441A0085726B /* bgMusic_loop_5.caf in Resources */,
 				9C89E6C818D7441A0085726B /* Page_start_iPhone4S.png in Resources */,
@@ -2590,13 +2591,14 @@
 				9C89E6D018D7441A0085726B /* Icon_boss.png in Resources */,
 				9C89E6BC18D7441A0085726B /* num_0.png in Resources */,
 				9C89E61B18D7441A0085726B /* getCoin.plist in Resources */,
-				9C89E6EB18D7441A0085726B /* pineapple_splurt.plist in Resources */,
 				9C89E64518D7441A0085726B /* zhangfei_attack.plist in Resources */,
 				9C89E63B18D7441A0085726B /* Sihei_dead.plist in Resources */,
 				9C89E64A18D7441A0085726B /* zhangfei_injure.png in Resources */,
 				9C89E62F18D7441A0085726B /* numpic.plist in Resources */,
 				9C89E63718D7441A0085726B /* Siha_dead.plist in Resources */,
 				9C89E6D218D7441A0085726B /* Icon_heart.png in Resources */,
+				9CE315B318DEA5F100FA929C /* layer_2.png in Resources */,
+				9CE315B218DEA5F100FA929C /* layer_1.png in Resources */,
 				9C89E6D918D7441A0085726B /* sheet_64x64_10.png in Resources */,
 				9C89E6C218D7441A0085726B /* num_6.png in Resources */,
 				9C89E65018D7441A0085726B /* zombi_lv1_dead.png in Resources */,
@@ -2630,6 +2632,7 @@
 				9C89E64118D7441A0085726B /* Siheng_injure.plist in Resources */,
 				9C89E65A18D7441A0085726B /* humanVoice_girl.caf in Resources */,
 				9C89E64D18D7441A0085726B /* zombi_lv1.plist in Resources */,
+				9CE315B518DEA5F100FA929C /* layer_4.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				9C89E62218D7441A0085726B /* hit.png in Resources */,
 				9C89E6C918D7441A0085726B /* Page_start_iPhone5.png in Resources */,
@@ -2657,7 +2660,6 @@
 				9C89E6D118D7441A0085726B /* Icon_coin.png in Resources */,
 				9C89E6B918D7441A0085726B /* Icon_battle_nameBg_locked.png in Resources */,
 				9C89E61E18D7441A0085726B /* Girl_injure.png in Resources */,
-				9C89E6EC18D7441A0085726B /* strawberry_splurt.plist in Resources */,
 				9C89E6B218D7441A0085726B /* hit_normal.png in Resources */,
 				9C89E62718D7441A0085726B /* HuangjinSihei_dead.plist in Resources */,
 				9C89E6DC18D7441A0085726B /* sheet_64x64_13.png in Resources */,
@@ -2676,6 +2678,7 @@
 				9C89E65C18D7441A0085726B /* Bg_iPhone5.png in Resources */,
 				9C89E6E118D7441A0085726B /* sheet_64x64_4.png in Resources */,
 				9C89E63318D7441A0085726B /* Sibao_injured.plist in Resources */,
+				9CE315CB18DEE0E900FA929C /* blade_sparkle.plist in Resources */,
 				9C89E63618D7441A0085726B /* Sibao_normal.png in Resources */,
 				9C89E62818D7441A0085726B /* HuangjinSihei_dead.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -2763,6 +2766,7 @@
 				15A3D99F1682F7F9002FB0C5 /* cpRotaryLimitJoint.c in Sources */,
 				15A3D9A01682F7F9002FB0C5 /* cpSimpleMotor.c in Sources */,
 				15A3D9A11682F7F9002FB0C5 /* cpSlideJoint.c in Sources */,
+				9CE315CE18DF18BC00FA929C /* NullChar.cpp in Sources */,
 				15A3D9A21682F7F9002FB0C5 /* cpArbiter.c in Sources */,
 				15A3D9A31682F7F9002FB0C5 /* cpArray.c in Sources */,
 				15A3D9A41682F7F9002FB0C5 /* cpBB.c in Sources */,
@@ -2795,6 +2799,7 @@
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
+				9CE315A818D9D3A100FA929C /* PRFilledPolygon.cpp in Sources */,
 				15A3DA3C1682F826002FB0C5 /* CCLabelTTFLoader.cpp in Sources */,
 				15A3DA3D1682F826002FB0C5 /* CCLayerColorLoader.cpp in Sources */,
 				15A3DA3E1682F826002FB0C5 /* CCLayerGradientLoader.cpp in Sources */,
@@ -2803,7 +2808,6 @@
 				375BD5101868454E0024609E /* CCActionFrameEasing.cpp in Sources */,
 				15A3DA411682F826002FB0C5 /* CCMenuItemLoader.cpp in Sources */,
 				15A3DA421682F826002FB0C5 /* CCNode+CCBRelativePositioning.cpp in Sources */,
-				A2CBE525189F2EBF00D03BB0 /* PRRatcliffTriangulator.cpp in Sources */,
 				15A3DA431682F826002FB0C5 /* CCNodeLoader.cpp in Sources */,
 				15A3DA441682F826002FB0C5 /* CCNodeLoaderLibrary.cpp in Sources */,
 				15A3DA451682F826002FB0C5 /* CCParticleSystemQuadLoader.cpp in Sources */,
@@ -2833,10 +2837,10 @@
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
-				A2CBE524189F2EBF00D03BB0 /* PRFilledPolygon.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
 				15A3DA5E1682F826002FB0C5 /* CCPhysicsDebugNode.cpp in Sources */,
+				9CE315A918D9D3A100FA929C /* PRRatcliffTriangulator.cpp in Sources */,
 				375BD5131868454E0024609E /* CCActionObject.cpp in Sources */,
 				A2CBE713189F823100D03BB0 /* SceneOption.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
@@ -2850,7 +2854,6 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
-				9CAE71DE18C60D66000F4A23 /* CCBlade.cpp in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				1A8F3B6E175E05DA00049216 /* Animation.cpp in Sources */,
@@ -2873,6 +2876,7 @@
 				1A8F3B7C175E05DA00049216 /* Skeleton.cpp in Sources */,
 				1A8F3B7D175E05DA00049216 /* SkeletonData.cpp in Sources */,
 				1A8F3B7E175E05DA00049216 /* SkeletonJson.cpp in Sources */,
+				9CE315A718D9D3A100FA929C /* CCBlade.cpp in Sources */,
 				1A8F3B7F175E05DA00049216 /* Skin.cpp in Sources */,
 				1A8F3B80175E05DA00049216 /* Slot.cpp in Sources */,
 				1A8F3B81175E05DA00049216 /* SlotData.cpp in Sources */,
@@ -2921,13 +2925,14 @@
 				864170A718B0E0D2001CE902 /* GLES-Render.cpp in Sources */,
 				379BB9C317F03F3700829B88 /* UILabel.cpp in Sources */,
 				866B002818C4AE73002A9017 /* GameScene.cpp in Sources */,
+				9CE315AB18D9D3A100FA929C /* TouchTrailLayer.cpp in Sources */,
 				379BB9C417F03F3700829B88 /* UILabelAtlas.cpp in Sources */,
-				A2CBE526189F2EBF00D03BB0 /* triangulate.cpp in Sources */,
 				379BB9C517F03F3700829B88 /* UILabelBMFont.cpp in Sources */,
 				379BB9C617F03F3700829B88 /* UILoadingBar.cpp in Sources */,
 				379BB9C717F03F3700829B88 /* UISlider.cpp in Sources */,
 				379BB9C917F03F3700829B88 /* UITextField.cpp in Sources */,
 				379BB9CB17F03F3700829B88 /* DictionaryHelper.cpp in Sources */,
+				9CE315AA18D9D3A100FA929C /* triangulate.cpp in Sources */,
 				8641709218AA50F7001CE902 /* BossZhangjiao.cpp in Sources */,
 				379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */,
 				379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */,
@@ -2979,7 +2984,7 @@
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
@@ -2989,7 +2994,7 @@
 				PROVISIONING_PROFILE = "12704AE9-0884-400D-ADED-2A4ED7CFD7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = armv7;
 			};
@@ -3027,7 +3032,7 @@
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
@@ -3036,7 +3041,7 @@
 				PROVISIONING_PROFILE = "12704AE9-0884-400D-ADED-2A4ED7CFD7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
@@ -3052,8 +3057,10 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7s armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -3066,9 +3073,11 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7s armv6 armv7";
 			};
 			name = Release;
 		};

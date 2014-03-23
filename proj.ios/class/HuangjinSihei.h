@@ -17,7 +17,7 @@ class HuangjinSihei:public BaseCharacter{
 public:
     typedef BaseCharacter super;
     static BaseCharacter *spriteWithFile();
-    bool initSprite();
+    virtual bool initSprite();
     virtual void loadInjureAnim();
     virtual void loadAttackAnim();
     virtual void loadDeadAnim();

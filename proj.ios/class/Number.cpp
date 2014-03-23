@@ -10,19 +10,11 @@
 
 
 
-
-Number* Number::spriteWithFile(string name){
-    return (Number *)super::createWithSpriteFrameName(name.c_str());
-}
-
-
-bool  Number::initSprite(){
+bool Number::initSprite(){
     curcount =-1;
     dstCount =-1;
     return true;
 }
-
-
 
 
 bool Number::showNum(int num){
@@ -47,8 +39,8 @@ bool Number::showNumAnimation(int num){
     this->setTexture(CCTextureCache::sharedTextureCache()->addImage(fn));
     this->setScale(4);
     
-    CCEaseInOut *scaleDownAction =    CCEaseInOut::create(CCScaleTo::create(0.1,0.5,0.5),1.0);
-    CCEaseInOut *scaleDownNormal =  CCEaseInOut::create(CCScaleTo::create(0.1,1,1),1.0);
+    CCEaseInOut *scaleDownAction = CCEaseInOut::create(CCScaleTo::create(0.1,0.5,0.5),1.0);
+    CCEaseInOut *scaleDownNormal = CCEaseInOut::create(CCScaleTo::create(0.1,1,1),1.0);
     CCSequence *scaleSeq =  CCSequence::create(scaleDownAction,scaleDownNormal);
     CCCallFunc *callback = CCCallFunc::create(this, callfunc_selector(Number::showNextNum));// actionWithTarget:self selector:@selector(showNextNum)];
     this->runAction(CCSequence::create(scaleSeq,callback));

@@ -27,13 +27,16 @@
 #include "TouchTrailLayer.h"
 #include "CCBlade.h"
 
-#define kFileStreak "streak-hd.png"
+#define kFileStreak "Deco_shine_v1.png"
 
 USING_NS_CC;
 
 TouchTrailLayer::TouchTrailLayer()
 {
     setTouchEnabled(true);
+    _bladeSparkle = CCParticleSystemQuad::create("blade_sparkle.plist");
+    _bladeSparkle->stopSystem();
+    this->addChild(_bladeSparkle);
 }
 
 TouchTrailLayer* TouchTrailLayer::create()
@@ -47,17 +50,19 @@ void TouchTrailLayer::ccTouchesBegan(CCSet *pTouches, CCEvent *pEvent)
 {
     for (CCSetIterator it = pTouches->begin(); it != pTouches->end(); it++) {
         CCTouch *touch = (CCTouch *)*it;
-		CCBlade *blade = CCBlade::create(kFileStreak, 4, 50);
+		CCBlade *blade = CCBlade::create(kFileStreak, 24, 40);
         _map[touch] = blade;
 		addChild(blade);
         
-        blade->setColor(ccc3(255,0,0));
-        blade->setOpacity(100);
+      //  blade->setColor(ccc3(255,0,0));
+      //  blade->setOpacity(100);
         blade->setDrainInterval(1.0/40);
-        
         CCPoint point = convertTouchToNodeSpace(touch);
 		blade->push(point);
+        _bladeSparkle->setPosition(point);
+        _bladeSparkle->resetSystem();
 	}
+   
 }
 
 void TouchTrailLayer::ccTouchesMoved(CCSet *pTouches, CCEvent *pEvent)
@@ -70,6 +75,7 @@ void TouchTrailLayer::ccTouchesMoved(CCSet *pTouches, CCEvent *pEvent)
         CCPoint point = convertTouchToNodeSpace(touch);
         point = ccpAdd(ccpMult(point, 0.5f), ccpMult(touch->getPreviousLocation(), 0.5f));
 		blade->push(point);
+         _bladeSparkle->setPosition(point);
     }
 }
 
@@ -82,5 +88,6 @@ void TouchTrailLayer::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
         CCBlade *blade = _map[touch];
         blade->autoCleanup();
         _map.erase(touch);
+        _bladeSparkle->stopSystem();
     }
 }

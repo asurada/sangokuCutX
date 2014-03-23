@@ -8,6 +8,7 @@
 
 #include "Logic_Showup_01.h"
 #include "BossZhangjiao.h"
+#include "NullChar.h"
 #define KILLCOUNT ((int)30)
 
 
@@ -37,21 +38,18 @@ int Logic_Showup_01::getPosition(){
             }else if(posDiff < 0){
                 if(matrix[mainIndex][index] < 0 && prePosition != 0){
                      result->addObject(CCInteger::create((int)matrix[mainIndex][index]));
-//[result addObject:[NSNumber numberWithInteger:matrix[mainIndex][index]]];
                     
                 }else if(prePosition == 0 && matrix[mainIndex][index] != 0){
                      result->addObject(CCInteger::create((int)matrix[mainIndex][index]));
-//                    [result addObject:[NSNumber numberWithInteger:matrix[mainIndex][index]]];
                 }
             }else{
                 if(matrix[mainIndex][index] != 0){
                      result->addObject(CCInteger::create((int)matrix[mainIndex][index]));
- //                   [result addObject:[NSNumber numberWithInteger:matrix[mainIndex][index]]];
                 }
             }
         }
         
-        posDiff = (int)result->objectAtIndex(arc4random()%(result->count()));// [[result objectAtIndex:(arc4random()%([result count]))]integerValue];
+        posDiff = (int)result->objectAtIndex(arc4random()%(result->count()));
         prePosition = prePosition + posDiff;
         return prePosition;
     }
@@ -61,7 +59,7 @@ int Logic_Showup_01::getPosition(){
 
 
 
-Logic_Showup_01::Logic_Showup_01(void)
+Logic_Showup_01::Logic_Showup_01()
 {
     _enemyCount = KILLCOUNT;
     _enemyMoveUpSpeed = .3;
@@ -73,9 +71,20 @@ Logic_Showup_01::Logic_Showup_01(void)
     _bossWaitingTime = 2;
 }
 
+void Logic_Showup_01::showEnemey()
+{
+    BaseCharacter *enemy = createEnemy(6);
+    enemy->_waitingTime = _enemyWaitingTime;
+    enemy->_moveUpSpeed = _enemyMoveUpSpeed;
+    enemy->_moveDownSpeed = _enemyMoveDownSpeed;
+    //enemy->moveUp();
+
+}
 
 int Logic_Showup_01::showEnemey(int tickCnt,int killedCnt){
     
+    
+    /*
     if(killedCnt == 5 && sequence == 0){
         sequence = arc4random()% 7 +1 ;
     }else if(killedCnt == 11 && sequence == 0){
@@ -110,25 +119,37 @@ int Logic_Showup_01::showEnemey(int tickCnt,int killedCnt){
         }
         if(killedCnt < _enemyCount){//cnt < 14 &&
            // NSLog(@"look at %d",position);
-            enemy = (BaseCharacter *)_enemyBox->objectAtIndex(position);
-            if(enemy != NULL && enemy->getState()==_standby && !enemy->isRunning()){
-                enemy->removeFromParentAndCleanup(true);
-                enemy = this->createEnemy(position);
-                _enemyBox->replaceObjectAtIndex(position,enemy,true);
-                enemy->_waitingTime = _enemyWaitingTime;
-                enemy->_moveUpSpeed = _enemyMoveUpSpeed;
-                enemy->_moveDownSpeed = _enemyMoveDownSpeed;
-                enemy->moveUp();
-            }else if(enemy == NULL){
+            if(_enemyBox->count() == 1){
+                enemy = (BaseCharacter *)_enemyBox->objectAtIndex(position);
+                if(dynamic_cast<NullChar *>(enemy)== NULL  && enemy->getState()==_standby && !enemy->isRunning()){
+                    enemy->removeFromParentAndCleanup(true);
+                    enemy = this->createEnemy(position);
+                    _enemyBox->replaceObjectAtIndex(position,enemy,true);
+                    enemy->_waitingTime = _enemyWaitingTime;
+                    enemy->_moveUpSpeed = _enemyMoveUpSpeed;
+                    enemy->_moveDownSpeed = _enemyMoveDownSpeed;
+                    enemy->moveUp();
+                }else if(dynamic_cast<NullChar *>(enemy) != NULL ){
+                    //NSLog(@"insert at %d",position);
+                    enemy = this->createEnemy(position);
+                    _enemyBox->replaceObjectAtIndex(position,enemy);
+                    enemy->_waitingTime = _enemyWaitingTime;
+                    enemy->_moveUpSpeed = _enemyMoveUpSpeed;
+                    enemy->_moveDownSpeed = _enemyMoveDownSpeed;
+                    enemy->moveUp();
+                }else{
+                    tickCnt = 20;
+                }
+
+            }else {
                 //NSLog(@"insert at %d",position);
-                enemy = this->createEnemy(position);
-                _enemyBox->replaceObjectAtIndex(position,enemy);
-                enemy->_waitingTime = _enemyWaitingTime;
-                enemy->_moveUpSpeed = _enemyMoveUpSpeed;
-                enemy->_moveDownSpeed = _enemyMoveDownSpeed;
-                enemy->moveUp();
-            }else{
-                tickCnt = 20;
+                    enemy = this->createEnemy(position);
+                    _enemyBox->addObject(enemy);
+                    enemy->_waitingTime = _enemyWaitingTime;
+                    enemy->_moveUpSpeed = _enemyMoveUpSpeed;
+                    enemy->_moveDownSpeed = _enemyMoveDownSpeed;
+                    enemy->moveUp();
+                
             }
         }else if(killedCnt >= _enemyCount){
             if(!_bossAppear){
@@ -147,8 +168,9 @@ int Logic_Showup_01::showEnemey(int tickCnt,int killedCnt){
             
         }
     }
-    
+    */
     return tickCnt;
+     
     
 }
 
@@ -178,6 +200,9 @@ void Logic_Showup_01::loadEnmey(){
 }
 
 
-void bossAppear(int killedcnt){
+
+
+
+void Logic_Showup_01::bossAppear(int killedcnt){
     
 }

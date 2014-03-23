@@ -23,15 +23,19 @@ using namespace BaseCharacterSpace;
 
 Logic* Logic::iniLogic(Logic *lgc){
     this->_logic = lgc;
-    _enemyBox = CCArray::create();
-    _coinBox = CCArray::create();
     return this;
 }
 
 void Logic::loadEnmey(){
+    _enemyBox = CCArray::create();
+  
     for(int index = 0; index < 9;index++){
-        _enemyBox->addObject(NULL);
+        // BaseCharacter* enemy = ;[self createEnemey:index];
+        _enemyBox->addObject(CCNode::create());
     }
+    _enemyBox->retain();
+    _coinBox = CCArray::create();
+    _coinBox->retain();
 }
 
 BaseCharacter* Logic::createEnemy(int index){
@@ -49,7 +53,6 @@ BaseCharacter* Logic::createEnemy(int index){
 
 BaseCharacter* Logic::createBoss(BaseCharacter *boss,int index){
     boss->setState(_standby);
-  //  boss->charDelegate = this;
     if(boss->initSprite()){
         this->setSpritePositon(boss,index);
         _layer->addChild(boss);
@@ -58,7 +61,7 @@ BaseCharacter* Logic::createBoss(BaseCharacter *boss,int index){
 }
 
 void Logic::setSpritePositon(BaseCharacter *boss, int index){
-    if(boss != nil){
+    if(boss != NULL){
         boss->setPosition(CCPointMake(50+(index%3)*110,-25+(index/3)*105));
         boss->setOrderOfArrival(8-(index/3)*3);//
         boss->_index = index;
@@ -72,9 +75,9 @@ void Logic::setSpritePositon(BaseCharacter *boss, int index){
 BaseCharacter* Logic::getEnemy(){
     int ran = arc4random()%7;
     //NSLog(@"回目= %2d",ran);
-    switch (ran) {
+    switch (0) {
         case 0:
-            return (BaseCharacter *) Siheng::spriteWithFile();
+            return (BaseCharacter*)Siheng::spriteWithFile();
         case 1:
             return Siha::spriteWithFile();
         case 2:
@@ -90,7 +93,7 @@ BaseCharacter* Logic::getEnemy(){
         case 7:
             return BossZhangjiao::spriteWithFile();
         default:
-            return nil;
+            return NULL;
             break;
     }
 }
@@ -147,5 +150,34 @@ void Logic::onCoinDisappear(CCSprite *sender){
 int Logic::showEnemey(int tickCnt){
     return 0;
 }
+
+
+
+
+int Logic::showEnemey(int tickCnt,int killedCnt){
+    return 0;
+}
+
+
+void Logic:: showBoss(){
+    
+}
+
+
+void Logic::onGotCoint(CCSprite *sender){
+    
+}
+void Logic::onCoinDisapper(CCSprite *sender){
+    
+}
+void Logic::onCoinGot(CCSprite *sender){
+    
+}
+
+
+
+
+
+
 
 

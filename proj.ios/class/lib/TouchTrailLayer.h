@@ -34,6 +34,7 @@ class CCBlade;
 class TouchTrailLayer : public cocos2d::CCLayer {
 private:
     std::map< cocos2d::CCTouch *, CCBlade * >  _map;
+    cocos2d::CCParticleSystemQuad *_bladeSparkle;
 private:
     TouchTrailLayer();
     void ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);

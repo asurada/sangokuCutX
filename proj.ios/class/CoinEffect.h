@@ -10,12 +10,12 @@
 #define __sangokuCutX__CoinEffect__
 #include "BaseCharacter.h"
 
-using namespace BaseCharacterSpace;
+
 
 class CoinEffect:public CCSprite{
    
 public:
-    typedef BaseCharacter super;
+    typedef CCSprite super;
     static CoinEffect* spriteWithFile();
     bool initSprite();
     void coinDisappear();

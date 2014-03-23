@@ -13,7 +13,7 @@ using BaseCharacterSpace::state;
 using cocos2d::CCSprite;
 
 BaseCharacter* HuangjinSiha::spriteWithFile(){
-    return (BaseCharacter *)super::createWithSpriteFrameName("Siha_normal_1.png");
+    return (BaseCharacter *)CCSprite::createWithSpriteFrameName("Siha_normal_1.png");
 }
 
 

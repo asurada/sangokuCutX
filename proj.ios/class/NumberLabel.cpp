@@ -32,16 +32,16 @@ void NumberLabel::showNum(int num){
     int digits = (int)log10(num) + 1;
     
     if(num == 0){
-        Number *numlabel = Number::spriteWithFile("num_0.png"); //[Number spriteWithFile:@"num_0.png"];
-        numlabel->setPosition(ccp(numlabel->getPosition().x, numlabel->getPosition().y));
-        numList->addObject(numlabel);
-        this->addChild(numlabel);
+        Number *num = (Number *)CCSprite::create("num_0.png"); //[Number spriteWithFile:@"num_0.png"];
+        num->setPosition(ccp(num->getPosition().x, num->getPosition().y));
+        numList->addObject(num);
+        this->addChild(num);
         return;
     }
     
     for(int index = 0; index< digits;index++){
         if(numList->count()<index+1){
-            Number *numlabel = Number::spriteWithFile("num_1.png");
+            Number *numlabel = (Number *)Number::create("num_1.png");
             if(numlabel->initSprite()){
                 numlabel->setPosition(ccp(numlabel->getPosition().x + 20 * index, numlabel->getPosition().y));
                 numList->addObject(numlabel);

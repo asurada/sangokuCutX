@@ -25,8 +25,8 @@ using namespace cocos2d;
 class GameScene : public cocos2d::CCLayer, public ItemDelegate, public CharacterDelegate{
 public:
     typedef CCLayer super;
-    virtual ~GameScene();
-    virtual bool init();
+    ~GameScene();
+    bool init();
     static cocos2d::CCScene* scene();
     
     
@@ -65,7 +65,6 @@ public:
     void initHUD();
     void hogehoge();
     void initBackground_iphone5();
-    virtual void draw();
     void update(float32 c);
     void hitObject(CCTouch *touch,CCPoint *location);
     virtual void ccTouchesBegan(CCSet *touches, CCEvent *event);

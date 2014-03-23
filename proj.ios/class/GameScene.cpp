@@ -70,75 +70,24 @@ bool GameScene::init()
         return false;
     }
     
-    CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+    //CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+    //CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
-
+    
     this->initPhysics();
-    
-     logic->_layer = this;
-     logic->b2World = world;
-     logic->charDelegate = this;
-        
-
-     this->initBackground_iphone5();
-        
-        
-     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-        
-        
-        
-     // initialize the blade effect
-     _deltaRemainder = 0.0;
-     _blades = CCArray::createWithCapacity(3);
-     CCTexture2D *texture = CCTextureCache::sharedTextureCache()->addImage("Deco_shine_v1.png");
-    
-   
-    
-    /*
-    for (int i = 0; i < 3; i++)
-    {
-    
-        CCBlade *blade = CCBlade::bladeWithMaximumPoint(30);
-        
-        blade->dim(true);
-        
-        blade->setTexture(texture);
-        
-        this->addChild(blade,14);
-        _blades->addObject(blade);
-      }
-        */
-        
-        // initialize the blade sparkle particle effect
-
-    
- 
-    _bladeSparkle = CCParticleSystemQuad::create("blade_sparkle.plist");
-    
-    _bladeSparkle->stopSystem();
-    
-    
-    this->addChild(_bladeSparkle,14);
-    
+    logic = new Logic_Showup_01();
+    logic->_layer = this;
+    logic->b2World = world;
+    logic->charDelegate = this;
+    this->initBackground_iphone5();
     this->initHUD();
-    
-    
-    this->schedule(schedule_selector(GameScene::hogehoge),0.1f);
-        
-    
-    logic->loadEnmey();
-        
-    
-    this->setTouchEnabled(true);
-    
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bgMusic_loop_5.caf", true);
-  
-    this->scheduleUpdate();
-	
     TouchTrailLayer *layer = TouchTrailLayer::create();
-    addChild(layer);
-    
+    this->addChild(layer,12);
+    logic->showEnemey();
+   // this->schedule(schedule_selector(GameScene::hogehoge),0.1f);
+   // this->scheduleUpdate();
+    //logic->loadEnmey();
     return true;
 }
 
@@ -203,44 +152,6 @@ void GameScene::initPhysics(){
 	groundBody->CreateFixture(&groundBox,0);
 }
 
-void GameScene::draw()
-{
-	//
-	// IMPORTANT:
-	// This is only for debug purposes
-	// It is recommend to disable it
-
-	super::draw();
-
-	
-	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
-	
-	kmGLPushMatrix();
-	
-	world->DrawDebugData();
-	
-	kmGLPopMatrix();
-    
-   // if(!CCRectIsEmpty(particularSpriteRect)){
-        // glEnable(GL_LINE_SMOOTH);
-        //  glColor4ub(255, 255, 255, 255);
-        //  glLineWidth(2);
-        //  CGPoint vertices2[] = { original.origin, particularSpriteRect.origin};
-        //ccDrawPoly(vertices2, 4, YES);
-        
-        ccDrawColor4B(255, 255,255, 255);
-        ccDrawRect(particularSpriteRect->origin, ccpAdd(particularSpriteRect->origin, (ccp(particularSpriteRect->size.width,particularSpriteRect->size.height))));
-        //ccDrawRect(particularSpriteRect.origin,ccp(particularSpriteRect.origin.x+particularSpriteRect.size.width, particularSpriteRect.origin.y+particularSpriteRect.size.height));
-   // }
-    
-    //    if(!CGRectIsEmpty(particularSpriteRect)){
-    //       CGContextRef ctx = UIGraphicsGetCurrentContext();
-    //       CGContextSetRGBFillColor(ctx, 1.0, 0.0, 0.0, 1.0);
-    //       CGContextFillRect(ctx, particularSpriteRect);
-    //    }
-}
-
-
 
 void GameScene::hogehoge()
 {
@@ -290,29 +201,30 @@ void GameScene::initBackground_iphone5()
     CCSize screen = CCDirector::sharedDirector()->getWinSize();
 
     int height = 0;
-    int diff = 568.0 - screen.height;
+    int y = 0;
     
     CCSpriteBatchNode *spriteSheet = CCSpriteBatchNode::create("bg.png");
     this->addChild(spriteSheet);
     // add the background image
-    CCSprite *background_01 =CCSprite::create("layer_1.png");// [CCSprite spriteWithFile:@"Bg_iPhone5_01.png"];
-    background_01->setPosition(ccp(screen.width/2,screen.height + diff - background_01->getContentSize().height/2));//415
+    CCSprite *background_01 =CCSprite::create("layer_1.png");
+    background_01->setPosition(ccp(screen.width/2,screen.height - background_01->getContentSize().height/2));
     this->addChild(background_01,0);
     
-    height = background_01->getContentSize().height;
+    y = background_01->getPosition().y;
     CCSprite *background_02 = CCSprite::create("layer_2.png");
-    background_02->setPosition(ccp(screen.width/2,screen.height + diff - height - background_02->getContentSize().height/2));
+    background_02->setPosition(ccp(screen.width/2,y - background_01->getContentSize().height/2 - background_02->getContentSize().height/2 +1));
     this->addChild(background_02,3);
-    
+     y = background_02->getPosition().y;
     height = height + background_02->getContentSize().height;
     CCSprite *background_03 = CCSprite::create("layer_3.png");
-    background_03->setPosition(ccp(screen.width/2,screen.height + diff - height - background_03->getContentSize().height/2));
+    background_03->setPosition(ccp(screen.width/2,y - background_02->getContentSize().height/2 - background_03->getContentSize().height/2 +1));
     this->addChild(background_03,6);
-    
+     y = background_03->getPosition().y;
     height = height + background_03->getContentSize().height;
     CCSprite *background_04 = CCSprite::create("layer_4.png");
-    background_04->setPosition(ccp(screen.width/2,screen.height + diff - height - background_04->getContentSize().height/2));
+    background_04->setPosition(ccp(screen.width/2,y - background_03->getContentSize().height/2 - background_04->getContentSize().height/2 +1));
     this->addChild(background_04,9);
+    
     
 }
 
@@ -635,15 +547,7 @@ void GameScene::initHUD()
 {
     
     CCSize screen = CCDirector::sharedDirector()->getWinSize();
-    
-    /*
-     CCSprite *pasueIcon = [CCSprite spriteWithFile:@"btn_pause.png"];
-     CCSprite *selectedSprite = [CCSprite spriteWithFile:@"btn_pause.png"];
-     CCButton *button =[CCButton buttonWithNormalSprite:pasueIcon selectedSprite:selectedSprite target:self action:@selector(touchUpInSide:) forEvent:buttonEvent_TouchUpInside];
-     [button setTarget:self action:@selector(touchDown:) forEvent:buttonEvent_TouchDown];
-     button.position = ccp(screen.width - pasueIcon.contentSize.width/2-5, screen.height - pasueIcon.contentSize.height/2-5);
-     [self addChild:button];*/
-    
+
     CCMenuItem * pasueIcon = CCMenuItemImage::create("btn_pause.png", "btn_pause.png", this, menu_selector(GameScene::pushSpriteButton));
     pasueIcon->setTag(11);
     CCMenu * menu  = CCMenu::create(pasueIcon,nil);
@@ -652,11 +556,6 @@ void GameScene::initHUD()
     this->addChild(menu);
     
     
-    
-    
-    //CCSprite *pasueIcon = [CCSprite spriteWithFile:@"btn_pause.png"];
-    //pasueIcon.position = ccp(screen.width - pasueIcon.contentSize.width/2-5, screen.height - pasueIcon.contentSize.height/2-5);
-    //[self addChild:pasueIcon];
     bloods = CCArray::create();
     for (int i = 0; i < 3; i++)
     {
@@ -770,13 +669,11 @@ void GameScene::createLabel()
 	CCTexture2DPixelFormat currentFormat = CCTexture2D::defaultAlphaPixelFormat();
     CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_RGBA4444);
 	_zombiLabel =  CCLabelAtlas::create("0", "numbers.png",20,32,0);
-    //[[CCLabelAtlas alloc]  initWithString:@"0" charMapFile:@"numbers.png" itemWidth:20 itemHeight:32 startCharMap:'.'];
-	//_coinLabel =  [[CCLabelAtlas alloc]  initWithString:@"0" charMapFile:@"numbers.png" itemWidth:20 itemHeight:32 startCharMap:'.'];
     
     
     CCTexture2D::setDefaultAlphaPixelFormat(currentFormat);
     _zombiLabel->setPosition(ccp(_zombiIcon->getPosition().x+20,_zombiIcon->getPosition().y-15));
-    //_coinLabel.position = ccp(_coinIcon.position.x+20,_coinIcon.position.y-15);
+
     
     
     number = (NumberLabel *)NumberLabel::create();
